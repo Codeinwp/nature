@@ -58,34 +58,3 @@ function nature_fonts_url() {
     return $fonts_url;
 }
 
-
-if ( ! function_exists( 'nature_entry_date' ) ) :
-	/**
-	 * Prints HTML with date information for current post.
-	 *
-	 * Create your own twentysixteen_entry_date() function to override in a child theme.
-	 *
-	 * @since Twenty Sixteen 1.0
-	 */
-	function nature_entry_date() {
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		}
-
-		$time_string = sprintf( $time_string,
-			esc_attr( get_the_date( 'c' ) ),
-			get_the_date(),
-			esc_attr( get_the_modified_date( 'c' ) ),
-			get_the_modified_date()
-		);
-
-		printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
-			_x( 'Posted on', 'Used before publish date.', 'nature' ),
-			esc_url( get_permalink() ),
-			$time_string
-		);
-
-	}
-endif;

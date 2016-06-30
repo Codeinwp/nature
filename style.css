@@ -47,6 +47,45 @@ textarea {
     border-radius: 0;
 }
 
+blockquote {
+    border: none;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    margin: 20px 0;
+}
+
+blockquote:before {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: #b6c4a6;
+    margin: 0 auto;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+}
+
+blockquote:after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: #b6c4a6;
+    margin: 0 auto;
+    display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.entry-content ul,
+.entry-content ol {
+    margin: 15px 30px;
+}
+
 /*
 `* Header
  */
@@ -192,7 +231,7 @@ footer.footer .social-icons i:before {
 
 footer.footer .social-icons i:hover:before {
     background: none;
-    color: #f16c20;
+    color: #f89f8b;
 }
 
 footer.footer .social-icons {
@@ -208,6 +247,7 @@ h1.intro {
     font-weight: 700;
     line-height: 75px;
     letter-spacing: 5px;
+    margin-bottom: 45px;
 }
 
 .header-style-one .intro-section {
@@ -227,6 +267,8 @@ h1.intro {
     letter-spacing: .75px;
     position: relative;
     font-family: inherit;
+    margin-bottom: 45px;
+    margin-top: -20px;
 }
 
 .very-top-left {
@@ -995,6 +1037,11 @@ h2.comments-title {
     background: #f8f7f3;
 }
 
+.post-list article.sticky h1.entry-title {
+    padding-top: 0;
+}
+
+
 .page-header {
     border: none;
 }
@@ -1037,6 +1084,11 @@ article.page h1.single-title {
 
 .post-img-wrap {
     float: left;
+}
+
+.archive-top-text {
+    font-family: inherit;
+    font-style: italic;
 }
 
 /*

@@ -16,7 +16,9 @@
 				</span>
 			</span>
 
-			<?php nature_entry_date(); ?>
+			<time class="post-time posted-on published" datetime="<?php the_time('c'); ?>" itemprop="datePublished">
+				<?php the_time( get_option('date_format') ); ?>
+			</time>
 
 			<a href="<?php comments_link(); ?>" class="post-comments">
 				<?php comments_number( esc_html__('No comments','llorix-one-lite'), esc_html__('One comment','llorix-one-lite'), esc_html__('% comments','llorix-one-lite') ); ?>
