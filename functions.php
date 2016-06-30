@@ -22,6 +22,12 @@ if ( get_stylesheet() !== get_template() ) {
 }
 
 
+
+function nature_image_sizes() {
+	add_image_size( 'nature-post-thumbnail', 1366, 550, true ); // Custom image sizes
+}
+add_action( 'after_setup_theme', 'nature_image_sizes', 11 );
+
 /**
  * Return the Google font stylesheet URL, if available.
  *
@@ -76,7 +82,7 @@ if ( ! function_exists( 'nature_entry_date' ) ) :
 		);
 
 		printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
-			_x( 'Posted on', 'Used before publish date.', 'twentysixteen' ),
+			_x( 'Posted on', 'Used before publish date.', 'nature' ),
 			esc_url( get_permalink() ),
 			$time_string
 		);

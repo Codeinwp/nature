@@ -10,7 +10,7 @@
 			<div class="single-header-overlay"></div>
 			<?php
 				if ( has_post_thumbnail() ) {
-					the_post_thumbnail();
+					the_post_thumbnail( 'nature-post-thumbnail' );
 				}
 			?>
 			<div class="inner-title-wrap">
