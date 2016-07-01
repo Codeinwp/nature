@@ -23,10 +23,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-	padding: 24px 55px;
-	background: #f89f7b;
-	font-family: Montserrat, sans-serif;
-	border: none;
+    padding: 24px 55px;
+    background: #f89f7b;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .btn-primary:hover,
@@ -84,6 +87,11 @@ blockquote:after {
 .entry-content ul,
 .entry-content ol {
     margin: 15px 30px;
+}
+
+mark,
+ins {
+    background: none;
 }
 
 /*
@@ -430,6 +438,16 @@ h1.intro {
     background: rgba(144, 149, 122, 0.9);
 }
 
+.member-pic img {
+    width: auto;
+    height: auto;
+}
+
+.member-pic {
+    width: auto;
+    height: auto;
+}
+
 /*
 `* Testimonials section
  */
@@ -490,8 +508,20 @@ h1.intro {
 }
 
 .call-to-action .btn-primary {
+    padding: 24px 55px;
+    background: #f89f7b;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 400;
     background: #3d3d3d;
 }
+
+.call-to-action .btn-primary:hover {
+    background: #90957a;
+}
+
 
 /*
 `* Latest news section
@@ -610,7 +640,7 @@ button.control_prev{
 }
 
 .contact-info .contact-links a:hover {
-    color: #f16c20;
+    color: #f89f8b;
 }
 
 .contact-info .icon-container {
@@ -765,6 +795,20 @@ h1.single-title {
 .single-entry-meta .post-time {
     padding: 0;
     margin-left: 10px;
+}
+
+.content-inner-wrap {
+    padding: 60px 145px;
+    background: white;
+    margin-top: 10px;
+}
+
+.author-details-img-wrap {
+    float: left;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 35px;
+    margin-bottom: 10px;
 }
 
 /*
@@ -925,7 +969,7 @@ h2.comments-title {
     margin: 0;
 }
 
-.entry-content {
+.entry-content:not(.vertical-timeline .entry-content) {
     padding: 40px;
     margin-top: 0;
     float: left;
@@ -1091,6 +1135,12 @@ article.page h1.single-title {
     font-style: italic;
 }
 
+.post .entry-content,
+.search-article .entry-content {
+    float: left;
+    padding: 40px;
+}
+
 /*
 `* Sidebar
  */
@@ -1108,6 +1158,272 @@ input[type="search"] {
 
 .widget_search .search-form:hover:before {
     color: #f89f8b;
+}
+
+/*
+`* Pro version
+ */
+.single-service,
+.single-service:hover {
+    border: none;
+}
+
+.single-stats .icon-container i {
+    font-size: 40px;
+}
+
+.single-stats {
+    border-right: none;
+}
+
+.long-transparent-line {
+    background: rgba(255,255,255,0.3);
+}
+
+.single-stats h4 {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.stats-footer .white-text a {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.transparent-text {
+    font-style: italic;
+    font-weight: normal;
+    text-transform: lowercase;
+}
+
+.overlay-layer-2 {
+    background-color: rgba(64,63,60,0.9);
+}
+
+.portfolio-detail-hidden {
+    background-color: rgba(64,63,60,0.7);
+}
+
+.portfolio-detail-hidden h3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.portfolio-read-more {
+    padding: 12px 20px;
+    background: #f89f7b;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.portfolio-read-more:hover {
+    background: #90957a;
+}
+
+.portfolio-single,
+.portfolio-single:hover {
+    border: none;
+}
+
+.home-add-to-cart-wrap a {
+    padding: 2px 12px;
+    background: #f89f7b;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: none;
+}
+
+.home-add-to-cart-wrap a:hover {
+    background: #90957a;
+}
+
+.home-shop-product-title h3 {
+    color: #000;
+}
+
+.home-shop-product-price del {
+    font-weight: 400;
+}
+
+.home-shop-product,
+.portfolio-wrap {
+    padding-top: 40px;
+}
+
+body {
+    background-color: #f8f7f3 !important;
+}
+
+body {
+    color: #313131 !important;
+}
+
+.entry-content a,
+.cat-links a,
+.tags-links a,
+.author-details-title a {
+    color: #f89f8b !important;
+}
+
+.entry-content a:hover,
+.cat-links a:hover,
+.tags-links a:hover,
+.author-details-title a:hover {
+    color: #b6c4a6 !important;
+}
+
+.services .section-overlay-layer,
+.services,
+.navbar-inverse,
+.clients,
+.services .single-service,
+.testimonials .testimonials-box .feedback,
+.brief.timeline .timeline-box-wrap .info {
+    background: #FFF !important;
+}
+
+.services {
+    border-bottom: 1px solid #eaebec !important;
+}
+
+p.site-description {
+    color: #333;
+}
+
+.intro-section h1.intro,
+.intro-section h5.white-text,
+.intro-section button.btn-primary,
+.stats h4.white-text, .stats h4.white-text a,
+.stats .stats-footer p.white-text,
+.stats .stats-footer p.white-text a,
+.portfolio .portfolio-detail-hidden h3,
+.portfolio .portfolio-read-more,
+.team .section-header .dark-text,
+.team .section-header .sub-heading,
+.call-to-action h2.white-text,
+.call-to-action button.btn,
+.contact-links a,
+.comment-form .form-submit input {
+    color: #fff !important;
+}
+
+.stats .stats-footer p.white-text a:hover,
+.contact-links a:hover,
+.powered-by a:hover {
+    color: #90957a !important;
+}
+
+.btn-primary,
+.shop .home-add-to-cart-wrap a,
+.portfolio .portfolio-read-more {
+    background: #f89f7b !important;
+}
+
+.brief.timeline .info .entry-header h3.entry-title a:hover,
+.list-post-entry-meta a:hover,
+.post-list h1.entry-title a:hover {
+    color: #f89f7b !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.shop .home-shop-product .home-shop-product-info a:hover,
+.portfolio-read-more:hover,
+.comment-form .form-submit input:hover {
+    background: #90957a !important;
+}
+
+.single-service h3,
+.section-header h2,
+.brief.brief-design-one .content-section h2,
+.testimonials .testimonials-box .feedback h5.colored-text,
+.brief.timeline .timeline-text h2.dark-text,
+.post-list h1.entry-title a {
+    color: #3d3d3d !important;
+}
+
+.sub-heading,
+.services .sub-heading,
+.shop .section-header .sub-heading,
+.portfolio .section-header .sub-heading,
+.testimonials .section-header .sub-heading,
+.single-service,
+.services .single-service p,
+.brief-content-text,
+.stats .transparent-text,
+.testimonials .testimonials-box .feedback p,
+.powered-by a,
+.brief.timeline .info p, .brief.timeline .info,
+.list-post-entry-meta, .list-post-entry-meta a {
+    color: #787977 !important;
+}
+
+.shop .home-shop-product .home-shop-product-info a, .shop .home-shop-product-info p,
+.shop .home-shop-product-price {
+    color: #313131 !important;
+}
+
+.services .single-service .service-icon,
+.stats .icon-container .colored-text, .stats .stats-footer p.white-text a,
+.contact-info .contact-link-box .icon-container .colored-text {
+    color: #b6c4a6 !important;
+}
+
+.long-transparent-line {
+    background: rgba(255,255,255,0.3) !important;
+}
+
+.shop .home-shop-product-info {
+    background: rgba(255, 255, 255, 0.75) !important;
+}
+
+.team .team-member {
+    border-color: #FFF !important;
+}
+
+.member-details h5,
+.team .team-member .member-details .small-text {
+    color: #3d3d3d !important;
+}
+
+.testimonials .testimonials-box .feedback .small-text {
+    color: #889678 !important;
+}
+
+.testimonials .testimonials-box .feedback .pic-container-inner {
+    box-shadow: none !important;
+}
+
+.powered-by {
+    border-color: #e7e7e6 !important;
+}
+
+.vertical-timeline h3 a {
+    color: #90957a !important;
+}
+
+.timeline-box-wrap .info .entry-meta a {
+    color: #3d3d3d !important;
+}
+
+.timeline-box-wrap .read-more {
+    color: #f89f7b !important;
+}
+
+.timeline-box-wrap .read-more:hover {
+    color: #90957a !important;
 }
 
 /*
@@ -1173,6 +1489,32 @@ input[type="search"] {
 
     .comment-respond {
         padding: 70px 15px;
+    }
+
+    .author-details-img-wrap {
+        margin: 0 auto;
+        float: none;
+        width: 100px;
+        margin-bottom: 35px;
+    }
+
+    .author-details-title {
+        display: block;
+        width: 100%;
+        text-align: center;
+        clear: left;
+    }
+
+    .author-details-content {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-inner-wrap {
+        padding: 60px 15px;
+        background: white;
+        margin-top: 10px;
     }
 
 }
