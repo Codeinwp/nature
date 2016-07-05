@@ -1,15 +1,18 @@
 <?php
 
+
 function nature_enqueue_styles() {
 
     $parent_style = 'nature-parent-style';
+
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'nature-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ));
 
     wp_enqueue_style( 'nature-fonts', nature_fonts_url(), array(), null );
 
 }
-add_action( 'wp_enqueue_scripts', 'nature_enqueue_styles', 999 );
+add_action( 'wp_enqueue_scripts', 'nature_enqueue_styles' );
+
+
 
 if ( get_stylesheet() !== get_template() ) {
     add_filter( 'pre_update_option_theme_mods_' . get_stylesheet(), function ( $value, $old_value ) {
@@ -20,7 +23,6 @@ if ( get_stylesheet() !== get_template() ) {
         return get_option( 'theme_mods_' . get_template(), $default );
     } );
 }
-
 
 
 function nature_image_sizes() {
