@@ -61,4 +61,11 @@ function nature_fonts_url() {
 }
 
 
+function nature_filter_powered_by( $copyright ) {
+	$copyright = "<a href=\"http://themeisle.com/themes/nature/\" target=\"_blank\" rel=\"nofollow\">Nature</a> ".esc_html__( 'powered by', 'nature' )." <a href=\"http://wordpress.org/\"  target=\"_blank\" rel=\"nofollow\">".esc_html__( 'WordPress', 'nature' )."</a>";
+	return $copyright;
+}
+add_filter( 'llorix_one_lite_powered_by', 'nature_filter_powered_by' );
+
+
 
