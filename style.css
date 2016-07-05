@@ -1664,6 +1664,12 @@ p.site-description {
     border: none;
 }
 
+.woocommerce-Price-amount {
+    font-size: 24px;
+    color: #000;
+    font-weight: 400;
+}
+
 /*
 `* Responsive
  */
