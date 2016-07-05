@@ -1476,6 +1476,28 @@ p.site-description {
         padding-left: 0;
     }
 
+    button.dropdown-toggle,
+    button.dropdown-toggle:hover,
+    button.dropdown-toggle:active {
+        right: -5px;
+        width: 35px;
+        height: 35px;
+        padding: 5px;
+    }
+
+    .dropdown-toggle.toggled-on .dropdown-toggle-inner:after {
+        content: "\f107";
+        margin-left: -2px;
+    }
+
+    button.dropdown-toggle.toggled-on .dropdown-toggle-inner,
+    button.dropdown-toggle.toggled-on:hover .dropdown-toggle-inner,
+    button.dropdown-toggle.toggled-on:focus .dropdown-toggle-inner,
+    button.dropdown-toggle:hover .dropdown-toggle-inner,
+    button.dropdown-toggle:focus .dropdown-toggle-inner {
+        background-color: #f89f8b;
+    }
+
     .header .overlay-layer {
         padding-top: 85px !important;
     }
