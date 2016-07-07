@@ -1,4 +1,8 @@
 
+### 0.2 - 07/07/2016
+**Changes:** 
+- WooCommerce support integration
+
 ### 0.4.1 - 04/07/2016
 **Changes:** 
 - Development
