@@ -427,7 +427,7 @@ h1.intro {
 }
 
 .team-member:hover .member-details {
-    background: rgba(182, 196, 166, 0.9);
+    background: rgba(182, 196, 166, 0.9) !important;
     color: #3d3d3d;
 }
 
@@ -436,7 +436,7 @@ h1.intro {
 }
 
 .team .section-overlay-layer {
-    background: rgba(144, 149, 122, 0.9);
+    background: rgba(144, 149, 122, 0.9) !important;
 }
 
 .member-pic img {
@@ -1145,6 +1145,10 @@ article.page h1.single-title {
     width: 100%;
 }
 
+.page .vertical-timeline .entry-content {
+    padding: 0;
+}
+
 .woocommerce div.product .woocommerce-tabs .panel {
     padding: 40px;
 }
@@ -1478,6 +1482,7 @@ p.site-description {
 
 .testimonials .testimonials-box .feedback .pic-container-inner {
     box-shadow: none !important;
+    border: none;
 }
 
 .powered-by {
@@ -1666,10 +1671,62 @@ p.site-description {
 }
 
 .woocommerce-Price-amount {
-    font-size: 24px;
+    font-size: 16px;
     color: #000;
     font-weight: 400;
 }
+
+.entry-summary ins .woocommerce-Price-amount {
+    font-size: 20px;
+}
+
+.woocommerce ul.products li.product a.added_to_cart,
+.woocommerce .products .product a.added_to_cart {
+    padding: 10px 15px;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+    box-shadow: none;
+}
+
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.woocommerce-review-link {
+    color: #90957a;
+}
+
+.woocommerce-review-link:hover {
+    color: inherit;
+}
+
+.shop .home-shop-product .home-shop-product-info .home-add-to-cart-wrap a {
+    padding: 4px 15px;
+    background: #f89f7b;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+    box-shadow: none;
+    color: #FFF !important;
+    border: none !important;
+    opacity: 1 !important;
+}
+
+.home-shop-product-info p {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.home-shop-product-price ins .woocommerce-Price-amount {}
+
+.home-shop-product-price del .woocommerce-Price-amount {}
 
 /*
 `* Responsive
