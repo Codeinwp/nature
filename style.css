@@ -1,12 +1,12 @@
 /*
-Theme Name: 	Naturelle
-Theme 			URI: https://www.themeisle.com/ 
-Description: 	Naturelle is a beatiful one page WordPress theme.
-Author: 		Themeisle
-URI: 			https://www.themeisle.com/ 
-Template: 		llorix-one-lite
-Version: 		0.2
-Tags: responsive-layout, one-column, two-columns, right-sidebar, custom-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Theme Name:     Naturelle
+Theme:          URI: https://www.themeisle.com/
+Description:    Naturelle is a beatiful one page WordPress theme.
+Author:         Themeisle
+URI:            https://www.themeisle.com/
+Template:       llorix-one-lite
+Version:        0.2
+Tags:           responsive-layout, one-column, two-columns, right-sidebar, custom-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
 
 /*
@@ -321,6 +321,7 @@ h1.intro {
     font-weight: 400;
     color: #787977;
     letter-spacing: 0.5px;
+    border: none !important;
 }
 
 .section-header h2 {
@@ -357,7 +358,7 @@ h1.intro {
     color: #3d3d3d;
     text-transform: uppercase;
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
 }
 
 .single-service h3:after {
@@ -523,6 +524,10 @@ h1.intro {
     background: #90957a;
 }
 
+.call-to-action h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
 
 /*
 `* Latest news section
@@ -530,6 +535,10 @@ h1.intro {
 .brief.timeline {
     background-color: #f8f7f3;
     border-bottom: none;
+}
+
+.brief h2 {
+    font-size: 28px;
 }
 
 .timeline-section {
@@ -1309,7 +1318,7 @@ input[type="search"] {
 
 .portfolio-single,
 .portfolio-single:hover {
-    border: none;
+    border: none !important;
 }
 
 .home-add-to-cart-wrap a {
@@ -1407,6 +1416,24 @@ p.site-description {
 .shop .home-add-to-cart-wrap a,
 .portfolio .portfolio-read-more {
     background: #f89f7b !important;
+}
+
+.portfolio .portfolio-read-more {
+    padding: 10px 15px;
+    background: #f89f7b;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+    box-shadow: none;
+    color: #FFF !important;
+    border: none !important;
+    opacity: 1 !important;
+}
+
+.portfolio-detail-inner h3 {
+    font-size: 14px !important;
 }
 
 .brief.timeline .info .entry-header h3.entry-title a:hover,
@@ -1705,6 +1732,12 @@ p.site-description {
     color: inherit;
 }
 
+.home-shop-product-price del,
+.home-shop-product-price del .woocommerce-Price-amount,
+.home-shop-product-price del .woocommerce-Price-amount span {
+    color: #787977 !important;
+}
+
 .shop .home-shop-product .home-shop-product-info .home-add-to-cart-wrap a {
     padding: 4px 15px;
     background: #f89f7b;
@@ -1841,11 +1874,10 @@ p.site-description {
         margin-top: 10px;
     }
 
-}
-
-@media (max-width: 992px) {
-
-
+    .timeline-section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
 }
 
@@ -1853,6 +1885,10 @@ p.site-description {
 
     .post-author {
         float: none;
+    }
+
+    .single-stats {
+        width: 100%;
     }
 
 }
