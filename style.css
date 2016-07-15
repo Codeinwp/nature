@@ -247,6 +247,31 @@ footer.footer .social-icons {
     padding-top: 15px;
 }
 
+footer.footer .widget-title {
+    color: #403f3c;
+}
+
+footer.footer .widget-title:after {
+    display: none;
+}
+
+.footer,
+.footer a {
+    color: #787977 !important;
+}
+
+.footer a:hover {
+    color: #f89f7b !important;
+}
+
+footer.footer #wp-calendar th {
+    border: 1px solid #ffffff;
+}
+
+footer.footer #wp-calendar th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 /*
 `* Intro section
  */
@@ -1879,6 +1904,18 @@ p.site-description {
         padding-right: 30px;
     }
 
+    .timeline-box-wrap .info {
+        padding-left: 180px;
+    }
+
+    .timeline-box-wrap .icon-container {
+        margin-left: 0;
+    }
+
+    .timeline-text {
+        padding: 0 15px;
+    }
+
 }
 
 @media (max-width: 580px) {
@@ -1889,6 +1926,18 @@ p.site-description {
 
     .single-stats {
         width: 100%;
+    }
+
+    .timeline-box-wrap .info {
+        padding-left: 180px;
+    }
+
+    .timeline-box-wrap .icon-container {
+        margin-left: 0;
+    }
+
+    .timeline-text {
+        padding: 0 15px;
     }
 
 }
