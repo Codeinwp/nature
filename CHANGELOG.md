@@ -1,4 +1,9 @@
 
+### 0.3 - 19/08/2016
+**Changes:** 
+- Complete the readme file
+- Fixed compatibility issues with Llorix One Companion and Llorix One Plus
+
 ### 0.2 - 07/07/2016
 **Changes:** 
 - WooCommerce support integration
