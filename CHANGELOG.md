@@ -1,4 +1,8 @@
 
+### 0.4 - 19/08/2016
+**Changes:** 
+- Update style.css
+
 ### 0.3 - 19/08/2016
 **Changes:** 
 - Complete the readme file
