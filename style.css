@@ -1,12 +1,12 @@
 /*
-Theme Name: 	Naturelle
-Theme 			URI: https://www.themeisle.com/ 
-Description: 	Naturelle is a beatiful one page WordPress theme.
-Author: 		Themeisle
-URI: 			https://www.themeisle.com/ 
-Template: 		llorix-one-lite
-Version: 		0.2
-Tags: responsive-layout, one-column, two-columns, right-sidebar, custom-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Theme Name:     Naturelle
+Theme:          URI: https://www.themeisle.com/
+Description:    Naturelle is a beatiful one page WordPress theme.
+Author:         Themeisle
+URI:            https://www.themeisle.com/
+Template:       llorix-one-lite
+Version:        0.3
+Tags:           responsive-layout, one-column, two-columns, right-sidebar, custom-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
 
 /*
@@ -247,6 +247,31 @@ footer.footer .social-icons {
     padding-top: 15px;
 }
 
+footer.footer .widget-title {
+    color: #403f3c;
+}
+
+footer.footer .widget-title:after {
+    display: none;
+}
+
+.footer,
+.footer a {
+    color: #787977 !important;
+}
+
+.footer a:hover {
+    color: #f89f7b !important;
+}
+
+footer.footer #wp-calendar th {
+    border: 1px solid #ffffff;
+}
+
+footer.footer #wp-calendar th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 /*
 `* Intro section
  */
@@ -321,6 +346,7 @@ h1.intro {
     font-weight: 400;
     color: #787977;
     letter-spacing: 0.5px;
+    border: none !important;
 }
 
 .section-header h2 {
@@ -357,7 +383,7 @@ h1.intro {
     color: #3d3d3d;
     text-transform: uppercase;
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
 }
 
 .single-service h3:after {
@@ -427,7 +453,7 @@ h1.intro {
 }
 
 .team-member:hover .member-details {
-    background: rgba(182, 196, 166, 0.9);
+    background: rgba(182, 196, 166, 0.9) !important;
     color: #3d3d3d;
 }
 
@@ -436,7 +462,7 @@ h1.intro {
 }
 
 .team .section-overlay-layer {
-    background: rgba(144, 149, 122, 0.9);
+    background: rgba(144, 149, 122, 0.9) !important;
 }
 
 .member-pic img {
@@ -523,6 +549,10 @@ h1.intro {
     background: #90957a;
 }
 
+.call-to-action h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
 
 /*
 `* Latest news section
@@ -530,6 +560,10 @@ h1.intro {
 .brief.timeline {
     background-color: #f8f7f3;
     border-bottom: none;
+}
+
+.brief h2 {
+    font-size: 28px;
 }
 
 .timeline-section {
@@ -1145,6 +1179,10 @@ article.page h1.single-title {
     width: 100%;
 }
 
+.page .vertical-timeline .entry-content {
+    padding: 0;
+}
+
 .woocommerce div.product .woocommerce-tabs .panel {
     padding: 40px;
 }
@@ -1305,7 +1343,7 @@ input[type="search"] {
 
 .portfolio-single,
 .portfolio-single:hover {
-    border: none;
+    border: none !important;
 }
 
 .home-add-to-cart-wrap a {
@@ -1405,6 +1443,24 @@ p.site-description {
     background: #f89f7b !important;
 }
 
+.portfolio .portfolio-read-more {
+    padding: 10px 15px;
+    background: #f89f7b;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+    box-shadow: none;
+    color: #FFF !important;
+    border: none !important;
+    opacity: 1 !important;
+}
+
+.portfolio-detail-inner h3 {
+    font-size: 14px !important;
+}
+
 .brief.timeline .info .entry-header h3.entry-title a:hover,
 .list-post-entry-meta a:hover,
 .post-list h1.entry-title a:hover {
@@ -1478,6 +1534,7 @@ p.site-description {
 
 .testimonials .testimonials-box .feedback .pic-container-inner {
     box-shadow: none !important;
+    border: none;
 }
 
 .powered-by {
@@ -1666,10 +1723,68 @@ p.site-description {
 }
 
 .woocommerce-Price-amount {
-    font-size: 24px;
+    font-size: 16px;
     color: #000;
     font-weight: 400;
 }
+
+.entry-summary ins .woocommerce-Price-amount {
+    font-size: 20px;
+}
+
+.woocommerce ul.products li.product a.added_to_cart,
+.woocommerce .products .product a.added_to_cart {
+    padding: 10px 15px;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+    box-shadow: none;
+}
+
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.woocommerce-review-link {
+    color: #90957a;
+}
+
+.woocommerce-review-link:hover {
+    color: inherit;
+}
+
+.home-shop-product-price del,
+.home-shop-product-price del .woocommerce-Price-amount,
+.home-shop-product-price del .woocommerce-Price-amount span {
+    color: #787977 !important;
+}
+
+.shop .home-shop-product .home-shop-product-info .home-add-to-cart-wrap a {
+    padding: 4px 15px;
+    background: #f89f7b;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+    box-shadow: none;
+    color: #FFF !important;
+    border: none !important;
+    opacity: 1 !important;
+}
+
+.home-shop-product-info p {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.home-shop-product-price ins .woocommerce-Price-amount {}
+
+.home-shop-product-price del .woocommerce-Price-amount {}
 
 /*
 `* Responsive
@@ -1784,11 +1899,22 @@ p.site-description {
         margin-top: 10px;
     }
 
-}
+    .timeline-section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
-@media (max-width: 992px) {
+    .timeline-box-wrap .info {
+        padding-left: 180px;
+    }
 
+    .timeline-box-wrap .icon-container {
+        margin-left: 0;
+    }
 
+    .timeline-text {
+        padding: 0 15px;
+    }
 
 }
 
@@ -1796,6 +1922,22 @@ p.site-description {
 
     .post-author {
         float: none;
+    }
+
+    .single-stats {
+        width: 100%;
+    }
+
+    .timeline-box-wrap .info {
+        padding-left: 180px;
+    }
+
+    .timeline-box-wrap .icon-container {
+        margin-left: 0;
+    }
+
+    .timeline-text {
+        padding: 0 15px;
     }
 
 }
