@@ -95,6 +95,11 @@ ins {
     background: none;
 }
 
+article td,
+article th {
+    padding: 7px;
+}
+
 /*
 `* Header
  */
