@@ -85,6 +85,20 @@ blockquote:after {
     right: 0;
 }
 
+blockquote.alignleft {
+    float: left;
+    max-width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+blockquote.alignright {
+    float: right;
+    max-width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .entry-content ul,
 .entry-content ol {
     margin: 15px 30px;
@@ -1923,6 +1937,11 @@ p.site-description {
 
     .timeline-text {
         padding: 0 15px;
+    }
+
+    blockquote.alignleft,
+    blockquote.alignright {
+        max-width: 100%;
     }
 
 }
