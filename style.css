@@ -711,6 +711,13 @@ button.control_prev{
 }
 
 /*
+`* Contact page
+ */
+.page-template-template-contact-php #primary {
+    margin: 0;
+}
+
+/*
 `* Single
  */
 #primary {
