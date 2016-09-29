@@ -2165,4 +2165,41 @@ p.site-description {
         padding: 0 15px;
     }
 
+    .very-top-left,
+    .very-top-right {
+        text-align: center;
+        width: 100%;
+    }
+
+    .very-top-header ul.social-icons {
+        margin-top: 0;
+    }
+
+    header .navbar-brand {
+        padding: 7px;
+    }
+
+    h1.intro {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .archive-top-big-title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    #respond .comment-form p {
+        padding-left: 0;
+    }
+
+    .pirate_forms_wrap .form_field_wrap {
+        padding: 0;
+    }
+
+    .pirate-forms-submit-button {
+        margin-left: 0;
+    }
+
+
 }
