@@ -5,7 +5,7 @@ Author:         Themeisle
 Author URI:     https://www.themeisle.com/
 Description:    Naturelle is a beatiful one page WordPress theme.
 Template:       llorix-one-lite
-Version:        0.4
+Version:        0.5
 Tags:           responsive-layout, one-column, two-columns, right-sidebar, custom-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
 
@@ -85,6 +85,20 @@ blockquote:after {
     right: 0;
 }
 
+blockquote.alignleft {
+    float: left;
+    max-width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+blockquote.alignright {
+    float: right;
+    max-width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .entry-content ul,
 .entry-content ol {
     margin: 15px 30px;
@@ -93,6 +107,20 @@ blockquote:after {
 mark,
 ins {
     background: none;
+}
+
+article td,
+article th {
+    padding: 7px;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+.wp-caption-text {
+    background: #f8f7f3;
+    text-align: center;
 }
 
 /*
@@ -193,6 +221,10 @@ p.site-description {
 .sticky-navigation .login-register li.login a:hover,
 .sticky-navigation .main-navigation li:hover > a{
     color: #f89f8b;
+}
+
+.sticky-navigation .main-navigation ul ul a {
+    padding: 10px 20px;
 }
 
 /*
@@ -680,6 +712,13 @@ button.control_prev{
 
 .contact-info .icon-container {
     margin-bottom: 40px;
+}
+
+/*
+`* Contact page
+ */
+.page-template-template-contact-php #primary {
+    margin: 0;
 }
 
 /*
@@ -1238,7 +1277,9 @@ article.page h1.single-title {
     text-transform: uppercase;
 }
 
-.woocommerce-cart article.page {
+.woocommerce-cart article.page,
+.woocommerce-checkout article.page,
+.woocommerce-account article.page {
     background: none;
 }
 
@@ -1246,6 +1287,121 @@ article.page h1.single-title {
     background: #fff;
 }
 
+
+.select2-container .select2-choice {
+    border: 1px solid #E7E7E7;
+    color: #666;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    min-width: 50%;
+    width: 100%;
+    padding: 11px 10px;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 500;
+    height: auto;
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+    border: 1px solid #E7E7E7;
+    border-top-color: transparent;
+}
+
+.select2-drop.select2-drop-above.select2-drop-active {
+    border-top: 1px solid #E7E7E7;
+}
+
+.select2-drop-active {
+    border: 1px solid #E7E7E7;
+    color: #666;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.select2-container .select2-choice>.select2-chosen {
+    font-size: 14px;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce form .form-row select {
+    color: #666;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    min-width: 50%;
+    width: 100%;
+    padding: 15px 10px !important;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 500;
+    height: auto;
+}
+
+.select2-search input {
+    margin-top: 5px;
+    border-radius: 0 !important;
+}
+
+.woocommerce table.shop_table {
+    border-radius: 0px;
+}
+
+.woocommerce-variation-price {
+    float: left;
+    width: 100%;
+}
+
+.woocommerce-account .content-page {
+    background: #FFF;
+}
+
+.woocommerce form.login {
+    border: none;
+    padding: 0;
+}
+
+.woocommerce form .form-row label.inline {
+    margin-left: 20px;
+    padding-top: 14px;
+    display: inline-block;
+}
+
+.woocommerce-MyAccount-navigation ul {
+    padding: 0;
+    margin-top: 0;
+}
+
+.woocommerce-MyAccount-navigation li {
+    list-style: none;
+}
+
+.woocommerce-MyAccount-navigation li a {
+    padding: 10px;
+    background: #f8f7f3;
+    display: block;
+    color: #787977 !important;
+    margin-bottom: 2px;
+}
+
+.woocommerce-MyAccount-navigation li a:hover {
+    background-color: #fff;
+}
+
+.woocommerce form.checkout_coupon {
+    padding: 0;
+    border: none;
+}
+
+.woocommerce form.checkout_coupon .form-row-last {
+    margin-top: 8px;
+}
+
+.woocommerce-checkout .content-page {
+    background-color: #fff;
+}
 
 /*
 `* Sidebar
@@ -1786,6 +1942,70 @@ p.site-description {
 
 .home-shop-product-price del .woocommerce-Price-amount {}
 
+.woocommerce-checkout .checkout .col-2 h3#ship-to-different-address {
+    padding-left: 25px;
+}
+
+.woocommerce .woocommerce-shipping-fields input[type="checkbox"] {
+    top: 10px;
+    margin-left: 0;
+}
+
+/*
+`* Pirate Forms Plugin
+ */
+.pirate_forms_wrap input:not([type=submit]),
+.pirate_forms_wrap textarea {
+    color: #666;
+    border: 1px solid #dedede;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    min-width: 50%;
+    width: 100%;
+    padding: 15px 10px !important;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 500;
+    height: auto;
+}
+
+.pirate-forms-submit-button {
+    padding: 24px;
+    background: #f89f7b;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.pirate-forms-submit-button:hover {
+    background: #90957a;
+}
+
+.pirate_forms_wrap label {
+    float: left;
+}
+
+.widget .pirate_forms_wrap .pirate_forms_three_inputs  ,
+.widget .pirate_forms_wrap .contact_message_wrap,
+.widget .pirate_forms_wrap .contact_submit_wrap {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.widget_calendar th {
+    border: none;
+}
+
 /*
 `* Responsive
  */
@@ -1916,6 +2136,11 @@ p.site-description {
         padding: 0 15px;
     }
 
+    blockquote.alignleft,
+    blockquote.alignright {
+        max-width: 100%;
+    }
+
 }
 
 @media (max-width: 580px) {
@@ -1939,5 +2164,42 @@ p.site-description {
     .timeline-text {
         padding: 0 15px;
     }
+
+    .very-top-left,
+    .very-top-right {
+        text-align: center;
+        width: 100%;
+    }
+
+    .very-top-header ul.social-icons {
+        margin-top: 0;
+    }
+
+    header .navbar-brand {
+        padding: 7px;
+    }
+
+    h1.intro {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .archive-top-big-title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    #respond .comment-form p {
+        padding-left: 0;
+    }
+
+    .pirate_forms_wrap .form_field_wrap {
+        padding: 0;
+    }
+
+    .pirate-forms-submit-button {
+        margin-left: 0;
+    }
+
 
 }
