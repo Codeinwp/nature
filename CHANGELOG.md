@@ -1,4 +1,10 @@
 
+### 0.5 - 29/09/2016
+**Changes:** 
+- Improved responsive layout
+- Improved WooCommerce layout
+- Fixed CSS issues with Pirate Forms
+
 ### 0.4 - 19/08/2016
 **Changes:** 
 - Update style.css
