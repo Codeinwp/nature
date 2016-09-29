@@ -1277,7 +1277,9 @@ article.page h1.single-title {
     text-transform: uppercase;
 }
 
-.woocommerce-cart article.page {
+.woocommerce-cart article.page,
+.woocommerce-checkout article.page,
+.woocommerce-account article.page {
     background: none;
 }
 
@@ -1354,7 +1356,6 @@ article.page h1.single-title {
 
 .woocommerce-account .content-page {
     background: #FFF;
-    margin-top: 0;
 }
 
 .woocommerce form.login {
@@ -1386,6 +1387,19 @@ article.page h1.single-title {
 }
 
 .woocommerce-MyAccount-navigation li a:hover {
+    background-color: #fff;
+}
+
+.woocommerce form.checkout_coupon {
+    padding: 0;
+    border: none;
+}
+
+.woocommerce form.checkout_coupon .form-row-last {
+    margin-top: 8px;
+}
+
+.woocommerce-checkout .content-page {
     background-color: #fff;
 }
 
