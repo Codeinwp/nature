@@ -680,6 +680,11 @@ button.control_prev{
     padding-top: 30px;
 }
 
+#llorix_one_slider > ul > li .timeline-box-wrap:last-child {
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
 /*
 `* Contact info section
  */
