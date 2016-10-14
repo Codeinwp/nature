@@ -367,7 +367,43 @@ h1.intro {
 `* Clients section
  */
 .clients {
-    padding: 20px;
+    padding: 120px 0 100px;
+    border-bottom: 1px solid #f1f4f7;
+}
+
+.clients h2.dark-text {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3d3d3d;
+    font-size: 21px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+
+.clients h2.dark-text:after {
+    content: '';
+    background: #d9dcd4;
+    width: 30px;
+    height: 3px;
+    display: block;
+    text-align: center;
+    clear: both;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.client-logos {
+    padding: 0;
+}
+
+.client-logos li {
+    margin: 25px 50px 25px 50px;
+    max-height: 80px;
+}
+
+.client-logos li img {
+    max-height: 65px;
 }
 
 /*
@@ -2084,6 +2120,29 @@ p.site-description {
 
 }
 
+@media (max-width: 1200px) {
+    .client-logos li img {
+        max-width: 200px;
+    }
+    .client-logos li {
+        margin: 25px 30px 25px 30px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .main-navigation ul ul {
+        width: 200px;
+    }
+    .client-logos li img {
+        max-width: 120px;
+    }
+    .client-logos li {
+        margin: 25px;
+    }
+
+}
+
 @media (max-width: 767px) {
 
     #menu-primary {
@@ -2252,6 +2311,15 @@ p.site-description {
         padding-bottom: 40px;
         padding-top: 40px;
     }
+
+    .clients {
+        padding: 60px 0 50px;
+    }
+
+    .clients h2.dark-text {
+        margin-bottom: 50px;
+    }
+
 }
 
 @media (max-width: 580px) {
