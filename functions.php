@@ -67,4 +67,3 @@ function naturelle_filter_powered_by( $copyright ) {
 add_filter( 'llorix_one_lite_powered_by', 'naturelle_filter_powered_by' );
 
 
-
