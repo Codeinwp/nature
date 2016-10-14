@@ -77,13 +77,36 @@ function naturelle_customize_register( $wp_customize ) {
 		'priority'    => 10
 	));
 
+	/* Our story section button text */
+	$wp_customize->add_setting( 'naturelle_our_story_button', array(
+		'default' => esc_html__('Learn more','clarina'),
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	$wp_customize->add_control( 'naturelle_our_story_button', array(
+		'label'    => esc_html__( 'Button text', 'clarina' ),
+		'section'  => 'llorix_one_lite_about_section',
+		'priority'    => 50
+	));
+
+	/* Our story section button link */
+	$wp_customize->add_setting( 'naturelle_our_story_button_link', array(
+		'default' => esc_html__('#','clarina'),
+		'sanitize_callback' => 'llorix_one_lite_sanitize_text',
+		'transport' => 'postMessage'
+	));
+	$wp_customize->add_control( 'naturelle_our_story_button_link', array(
+		'label'    => esc_html__( 'Button link', 'clarina' ),
+		'section'  => 'llorix_one_lite_about_section',
+		'priority'    => 60
+	));
+
 }
 
 /* Customizer js file */
-function childtheme_customizer_live_preview() {
-	wp_enqueue_script( 'clarina_customizer_script', llorix_one_lite_get_file('/js/clarina_customizer.js'), array( 'jquery','customize-preview' ), '1.0', true
-	);
+function naturelle_customizer_live_preview() {
+	wp_enqueue_script( 'naturelle_customizer_script', llorix_one_lite_get_file('/js/naturelle_customizer.js'), array( 'jquery','customize-preview' ), '1.0', true );
 }
-add_action( 'customize_preview_init', 'childtheme_customizer_live_preview' );
+add_action( 'customize_preview_init', 'naturelle_customizer_live_preview' );
 
 

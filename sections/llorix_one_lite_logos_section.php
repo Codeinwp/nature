@@ -37,8 +37,8 @@
 			if ( ! empty( $llorix_one_lite_logos_decoded ) ) {
 				echo '<div class="clients white-bg" id="clients" role="region" aria-label="' . __( 'Affiliates Logos','llorix-one-lite' ) . '">';
 					echo '<div class="container">';
-						if( !empty($naturelle_title) || isset($wp_customize) ) {
-							echo '<h2 class="text-left dark-text'. ( empty($naturelle_title) && isset($wp_customize) ? ' llorix_one_lite_only_customizer' : '' ) .'">'. $naturelle_title .'</h2>';
+						if( !empty($naturelle_title) || is_customize_preview() ) {
+							echo '<h2 class="text-left dark-text'. ( empty($naturelle_title) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) .'">'. $naturelle_title .'</h2>';
 						}
 						echo '<ul class="client-logos">';
 
@@ -79,8 +79,8 @@
 			if ( ! empty( $llorix_one_lite_logos_decoded ) ) {
 				echo '<div class="clients white-bg llorix_one_lite_only_customizer" id="clients" role="region" aria-label="' . __( 'Affiliates Logos','llorix-one-lite' ) . '">';
 					echo '<div class="container">';
-						if( !empty($naturelle_title) || isset($wp_customize) ) {
-							echo '<h2 class="text-left dark-text'. ( empty($naturelle_title) && isset($wp_customize) ? ' llorix_one_lite_only_customizer' : '' ) .'">'. $naturelle_title .'</h2>';
+						if( !empty($naturelle_title) || is_customize_preview() ) {
+							echo '<h2 class="text-left dark-text'. ( empty($naturelle_title) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) .'">'. $naturelle_title .'</h2>';
 						}
 						echo '<ul class="client-logos">';
 
