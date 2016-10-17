@@ -509,9 +509,13 @@ h1.intro {
 }
 
 #services .section-header {
-    padding-top: 120px;
+    padding-top: 0;
     margin-top: 0;
  }
+
+#services {
+    padding-top: 120px;
+}
 
 /*
 `* Our team Section
@@ -636,6 +640,10 @@ h1.intro {
 .team .team-member .member-details .small-text {
     font-family: 'Bitter', serif;
     font-style: italic;
+}
+
+.team {
+    border-bottom: none;
 }
 
 /*
@@ -2418,8 +2426,13 @@ p.site-description {
     }
 
     #services .section-header {
+        padding-top: 0;
+    }
+
+    #services {
         padding-top: 60px;
     }
+
 
     .team-member-wrap .team-member-box {
         padding-right: 40px;
