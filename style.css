@@ -1852,6 +1852,11 @@ p.site-description {
 
 .powered-by {
     border-color: #e7e7e6 !important;
+    color: #b1afae;
+}
+
+.powered-by a {
+    color: #b1afae !important;
 }
 
 .vertical-timeline h3 a {
