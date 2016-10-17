@@ -309,7 +309,7 @@ footer.footer #wp-calendar th {
  */
 h1.intro {
     font-family: Montserrat, sans-serif;
-    font-size: 57px;
+    font-size: 59px;
     font-weight: 700;
     line-height: 75px;
     letter-spacing: 5px;
@@ -522,7 +522,8 @@ h1.intro {
 
 .team .section-header {
     position: relative;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
+    margin-top: 0;
 }
 
 .team .section-header:after {
@@ -554,6 +555,10 @@ h1.intro {
 
 .team .section-overlay-layer {
     background: rgba(144, 149, 122, 0.9) !important;
+}
+
+.team .section-overlay-layer {
+    padding-top: 120px;
 }
 
 .member-pic img {
@@ -607,13 +612,39 @@ h1.intro {
 }
 
 .team-member-wrap .team-member-box {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 78px;
+    padding-left: 78px;
+}
+
+.member-pic img {
+    width: 100%;
+}
+
+.team-member-box {
+    width: 33.33333333%;
+}
+
+.member-details {
+    height: 225px;
+    width: 225px;
+}
+
+.team .section-header .sub-heading {
+    color: #e7e7e6 !important;
+}
+
+.team .team-member .member-details .small-text {
+    font-family: 'Bitter', serif;
+    font-style: italic;
 }
 
 /*
 `* Ribbon section
  */
+.call-to-action {
+    border: none;
+}
+
 .call-to-action h2 {
     font-size: 59px !important;
     letter-spacing: 4px;
@@ -811,8 +842,8 @@ button.control_next.fade-btn {
 }
 
 .contact-info .section-overlay-layer {
-    padding-top: 70px;
-    padding-bottom: 110px;
+    padding-top: 90px;
+    padding-bottom: 123px;
 }
 
 .icon-container .colored-text {
@@ -825,6 +856,7 @@ button.control_next.fade-btn {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1px;
+    padding-top: 95px;
 }
 
 .contact-info .contact-links a:hover {
@@ -832,7 +864,11 @@ button.control_next.fade-btn {
 }
 
 .contact-info .icon-container {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+}
+
+.contact-link-box .fa {
+    font-size: 34px;
 }
 
 /*
@@ -2150,6 +2186,14 @@ p.site-description {
     .client-logos li {
         margin: 25px 30px 25px 30px;
     }
+    .team-member-wrap .team-member-box {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    .member-details {
+        height: 215px;
+        width: 215px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -2162,6 +2206,14 @@ p.site-description {
     }
     .client-logos li {
         margin: 25px;
+    }
+    .team-member-wrap .team-member-box {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .member-details {
+        height: 160px;
+        width: 160px;
     }
 
 }
@@ -2364,6 +2416,26 @@ p.site-description {
         padding-top: 60px;
     }
 
+    .team-member-wrap .team-member-box {
+        padding-right: 40px;
+        padding-left: 40px;
+        width: 100%;
+    }
+
+    .member-details {
+        height: 210px;
+        width: 210px;
+    }
+
+    .team .section-overlay-layer {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .contact-info .section-overlay-layer {
+        padding-top: 35px;
+        padding-bottom: 65px;
+    }
 }
 
 @media (max-width: 580px) {
