@@ -1,4 +1,11 @@
 
+### 0.6 - 17/10/2016
+**Changes:** 
+- Fixed Safari issue with Latest news section
+- Improved layout for the CTA section
+- New option for title in the Logos bar section
+- New option for button in the About section
+
 ### 0.5 - 29/09/2016
 **Changes:** 
 - Improved responsive layout
