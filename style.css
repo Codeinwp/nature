@@ -841,13 +841,34 @@ button.control_prev{
     letter-spacing: 0.75px;
 }
 
-.brief.timeline .info p .moretag {
-    display: none;
-}
-
 button.control_prev.fade-btn,
 button.control_next.fade-btn {
     opacity: 0.3 !important;
+}
+
+#latestnews .dark-text {
+    font-size: 38px;
+    font-weight: 700;
+    color: #3d3d3d;
+    text-transform: uppercase;
+}
+
+#latestnews .entry-summary > a {
+    display: none;
+}
+
+.read-more-wrap {
+    width: 100%;
+    float: left;
+}
+
+.read-more-wrap a {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    display: block;
 }
 
 /*
@@ -2463,6 +2484,7 @@ p.site-description {
         padding-top: 35px;
         padding-bottom: 65px;
     }
+
 }
 
 @media (max-width: 580px) {
