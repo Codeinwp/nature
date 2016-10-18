@@ -509,9 +509,23 @@ h1.intro {
 }
 
 #services .section-header {
-    padding-top: 120px;
-    margin-top: 0;
+    padding-top: 0;
+    margin: 0;
  }
+
+#services .section-overlay-layer {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.services-wrap > .service-box {
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+#services .section-header h2 {
+    margin-top: 80px;
+}
 
 /*
 `* Our team Section
@@ -636,6 +650,10 @@ h1.intro {
 .team .team-member .member-details .small-text {
     font-family: 'Bitter', serif;
     font-style: italic;
+}
+
+.team {
+    border-bottom: none;
 }
 
 /*
@@ -823,13 +841,34 @@ button.control_prev{
     letter-spacing: 0.75px;
 }
 
-.brief.timeline .info p .moretag {
-    display: none;
-}
-
 button.control_prev.fade-btn,
 button.control_next.fade-btn {
     opacity: 0.3 !important;
+}
+
+#latestnews .dark-text {
+    font-size: 38px;
+    font-weight: 700;
+    color: #3d3d3d;
+    text-transform: uppercase;
+}
+
+#latestnews .entry-summary > a {
+    display: none;
+}
+
+.read-more-wrap {
+    width: 100%;
+    float: left;
+}
+
+.read-more-wrap a {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    display: block;
 }
 
 /*
@@ -2418,6 +2457,10 @@ p.site-description {
     }
 
     #services .section-header {
+        padding-top: 0;
+    }
+
+    #services .section-overlay-layer {
         padding-top: 60px;
     }
 
@@ -2441,6 +2484,7 @@ p.site-description {
         padding-top: 35px;
         padding-bottom: 65px;
     }
+
 }
 
 @media (max-width: 580px) {

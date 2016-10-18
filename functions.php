@@ -110,3 +110,19 @@ function naturelle_customizer_live_preview() {
 add_action( 'customize_preview_init', 'naturelle_customizer_live_preview' );
 
 
+/**
+ * Change the excerpt.
+ * @param     string $more The excerpt.
+ * @return string
+ */
+function child_theme_setup() {
+	// override parent theme's 'more' text for excerpts
+	remove_filter( 'excerpt_more', 'llorix_one_lite_excerpt_more' );
+}
+add_action( 'after_setup_theme', 'child_theme_setup' );
+
+function naturelle_excerpt_more( $more ) {
+	global $post;
+	return '<span class="read-more-wrap"><a class="moretag" href="' . get_permalink( $post->ID ) . '">' . esc_html__( 'Continue Reading ', 'naturelle' ) . '<span class="screen-reader-text">' . get_the_title() . '</span></a></span>';
+}
+add_filter( 'excerpt_more', 'naturelle_excerpt_more' );
