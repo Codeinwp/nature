@@ -115,11 +115,11 @@ add_action( 'customize_preview_init', 'naturelle_customizer_live_preview' );
  * @param     string $more The excerpt.
  * @return string
  */
-function child_theme_setup() {
+function naturelle_theme_setup() {
 	// override parent theme's 'more' text for excerpts
 	remove_filter( 'excerpt_more', 'llorix_one_lite_excerpt_more' );
 }
-add_action( 'after_setup_theme', 'child_theme_setup' );
+add_action( 'after_setup_theme', 'naturelle_theme_setup' );
 
 function naturelle_excerpt_more( $more ) {
 	global $post;
