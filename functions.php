@@ -126,3 +126,37 @@ function naturelle_excerpt_more( $more ) {
 	return '<span class="read-more-wrap"><a class="moretag" href="' . get_permalink( $post->ID ) . '">' . esc_html__( 'Continue Reading ', 'naturelle' ) . '<span class="screen-reader-text">' . get_the_title() . '</span></a></span>';
 }
 add_filter( 'excerpt_more', 'naturelle_excerpt_more' );
+
+
+/* Add Placehoder in comment Form Fields (Name, Email, Website) */
+add_filter( 'comment_form_default_fields', 'naturelle_comment_placeholders' );
+function naturelle_comment_placeholders( $fields ) {
+	$fields['author'] = str_replace(
+		'<input',
+		'<input placeholder="'.esc_html( 'Name', 'naturelle' ).'"',
+		$fields['author']
+	);
+	$fields['email'] = str_replace(
+		'<input',
+		'<input placeholder="'.esc_html( 'Email', 'naturelle' ).'"',
+		$fields['email']
+	);
+	$fields['url'] = str_replace(
+		'<input',
+		'<input placeholder="'.esc_html( 'Website', 'naturelle' ).'"',
+		$fields['url']
+	);
+	return $fields;
+}
+
+/* Add Placehoder in comment Form Field (Comment) */
+add_filter( 'comment_form_defaults', 'naturelle_textarea_placeholder' );
+function naturelle_textarea_placeholder( $fields ) {
+
+	$fields['comment_field'] = str_replace(
+		'<textarea',
+		'<textarea placeholder="'.esc_html( 'Comment', 'naturelle' ).'"',
+		$fields['comment_field']
+	);
+	return $fields;
+}
