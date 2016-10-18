@@ -4,6 +4,7 @@ function naturelle_enqueue_styles() {
     $parent_style = 'naturelle-parent-style';
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'naturelle-fonts', naturelle_fonts_url(), array(), null );
+	wp_enqueue_script( 'naturelle-cutom-script', llorix_one_lite_get_file( '/js/custom.js' ), array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'naturelle_enqueue_styles' );
 
@@ -159,4 +160,28 @@ function naturelle_textarea_placeholder( $fields ) {
 		$fields['comment_field']
 	);
 	return $fields;
+}
+
+/* Search form in footer */
+add_action('llorix_one_lite_header_top_right_close', 'naturelle_add_header_search', 1);
+
+function naturelle_add_header_search() {
+
+	echo '
+	<div class="header-search">
+		<div class="glyphicon glyphicon-search header-search-button"><i class="fa fa-search" aria-hidden="true"></i></div>
+		<div class="header-search-input">';
+			get_search_form();
+		echo '</div>
+	</div>
+	';
+
+	/*
+	echo '<div class="header-top-search">';
+		echo '<div class="header-top-search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>';
+		echo '<div class="header-top-search-wrap">';
+			get_search_form();
+		echo '</div>';
+	echo '</div>';
+*/
 }

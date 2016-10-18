@@ -166,6 +166,16 @@ h1.site-title a:hover {
     font-size: 16px;
 }
 
+.very-top-header .social-icons {
+    display: inline-block;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 p.site-description {
     font-size: 14px;
     font-style: italic;
@@ -225,6 +235,115 @@ p.site-description {
 
 .sticky-navigation .main-navigation ul ul a {
     padding: 10px 20px;
+}
+
+/****
+Search form Header
+****/
+.header-search {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    position: relative;
+}
+
+.header-search-button {
+    font-size: 14px;
+    color: #CBC7C2;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.header-search:hover .header-search-button {
+    color: #fff;
+}
+
+.header-search-input {
+    display: none;
+    padding: 0 5px;
+    width: 220px;
+    position: absolute;
+    right: 0;
+    top: 38px;
+    background: rgb(144, 149, 122);
+    z-index: 9;
+}
+
+.header-search-input label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 100%;
+    padding-right: 0;
+}
+
+.header-search.header-search-open .header-search-input {
+    display: block;
+}
+
+.header-search.header-search-open .header-search-button {
+    color: #fff;
+}
+
+.header-search-input input[type=submit] {
+    position: absolute;
+    background: none;
+    border: none;
+    text-indent: -9999999px;
+    width: 33px;
+    height: 37px;
+    top: 0px;
+    right: 5px;
+    z-index: 9;
+    padding: 5px;
+}
+
+.header-search-input input[type="search"] {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    letter-spacing: 2px;
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    line-height: 12px;
+    padding-right: 28px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: 0;
+}
+
+.header-search-input:after {
+    position: absolute;
+    color: #999;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 12px;
+    line-height: 33px;
+    top: 0px;
+    right: 0px;
+    width: 20px;
+    z-index: 8;
+    width: 43px;
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f002";
+    text-align: center;
+    line-height: 37px;
+}
+
+.header-search .fa {
+    top: 0;
+    vertical-align: top;
+    line-height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 /*
@@ -1933,6 +2052,14 @@ p.site-description {
 
 .author-details-title a:hover {
     color: #f89f8b !important;
+}
+
+.comment-form p {
+    padding-left: 0;
+}
+
+.comment-form label {
+    display: none;
 }
 
 /*
