@@ -14,5 +14,5 @@
     $( 'html' ).click( function() {
         $( '.header-search' ).removeClass( 'header-search-open' );
     } );
-
+    
 } )(jQuery);

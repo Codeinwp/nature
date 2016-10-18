@@ -164,24 +164,31 @@ function naturelle_textarea_placeholder( $fields ) {
 
 /* Search form in footer */
 add_action('llorix_one_lite_header_top_right_close', 'naturelle_add_header_search', 1);
-
 function naturelle_add_header_search() {
 
-	echo '
-	<div class="header-search">
-		<div class="glyphicon glyphicon-search header-search-button"><i class="fa fa-search" aria-hidden="true"></i></div>
-		<div class="header-search-input">';
-			get_search_form();
-		echo '</div>
-	</div>
-	';
-
-	/*
-	echo '<div class="header-top-search">';
-		echo '<div class="header-top-search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>';
-		echo '<div class="header-top-search-wrap">';
+	echo '<div class="header-search">';
+		echo '<div class="glyphicon glyphicon-search header-search-button"><i class="fa fa-search" aria-hidden="true"></i></div>';
+		echo '<div class="header-search-input">';
 			get_search_form();
 		echo '</div>';
 	echo '</div>';
-*/
+}
+
+/* Logos title */
+add_action('llorix_one_lite_home_logos_section_open', 'naturelle_logos_title', 1);
+function naturelle_logos_title() {
+	$naturelle_title = get_theme_mod('naturelle_logos_title',esc_html__('Notable partners','naturelle'));
+	if ( ! empty( $naturelle_title ) || is_customize_preview() ) {
+		echo '<h2 class="text-left dark-text' . ( empty( $naturelle_title ) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) . '">' . $naturelle_title . '</h2>';
+	}
+}
+
+/* About button */
+add_action('llorix_one_lite_home_about_section_content_one_after', 'naturelle_about_button', 1);
+function naturelle_about_button() {
+	$naturelle_our_story_button = get_theme_mod( 'naturelle_our_story_button', esc_html__( 'Learn more','naturelle' ) );
+	$naturelle_our_story_button_link = get_theme_mod( 'naturelle_our_story_button_link', esc_html__( '#','naturelle' ) );
+	if( !empty($naturelle_our_story_button) || is_customize_preview() ) {
+		echo '<button id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll standard-button-story'. ( empty($naturelle_our_story_button) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) .'" data-anchor="' . $naturelle_our_story_button_link . '"><span class="screen-reader-text">' . esc_html__( 'Header button label:','llorix-one-lite' ) . $naturelle_our_story_button . '</span>' . $naturelle_our_story_button . '</button>';
+	}
 }
