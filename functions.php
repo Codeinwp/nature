@@ -192,3 +192,22 @@ function naturelle_about_button() {
 		echo '<button id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll standard-button-story'. ( empty($naturelle_our_story_button) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) .'" data-anchor="' . $naturelle_our_story_button_link . '"><span class="screen-reader-text">' . esc_html__( 'Header button label:','llorix-one-lite' ) . $naturelle_our_story_button . '</span>' . $naturelle_our_story_button . '</button>';
 	}
 }
+
+/* Homepage section order */
+function naturelle_sections_order() {
+	$naturelle_order = array(
+		'llorix_one_lite_our_services_section',
+		'sections/llorix_one_lite_our_story_section',
+		'llorix_one_lite_our_team_section',
+		'llorix_one_lite_happy_customers_section',
+		'sections/llorix_one_lite_latest_news_section',
+		'sections/llorix_one_lite_logos_section',
+		'sections/llorix_one_lite_ribbon_section',
+		'sections/llorix_one_lite_contact_info_section',
+		'sections/llorix_one_lite_map_section'
+	);
+	return $naturelle_order;
+}
+add_filter( 'llorix_one_companion_sections_filter', 'naturelle_sections_order');
+
+
