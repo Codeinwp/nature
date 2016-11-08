@@ -4,6 +4,7 @@ function naturelle_enqueue_styles() {
     $parent_style = 'naturelle-parent-style';
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'naturelle-fonts', naturelle_fonts_url(), array(), null );
+	wp_enqueue_script( 'naturelle-cutom-script', llorix_one_lite_get_file( '/js/custom.js' ), array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'naturelle_enqueue_styles' );
 
@@ -115,14 +116,98 @@ add_action( 'customize_preview_init', 'naturelle_customizer_live_preview' );
  * @param     string $more The excerpt.
  * @return string
  */
-function child_theme_setup() {
+function naturelle_theme_setup() {
 	// override parent theme's 'more' text for excerpts
 	remove_filter( 'excerpt_more', 'llorix_one_lite_excerpt_more' );
 }
-add_action( 'after_setup_theme', 'child_theme_setup' );
+add_action( 'after_setup_theme', 'naturelle_theme_setup' );
 
 function naturelle_excerpt_more( $more ) {
 	global $post;
 	return '<span class="read-more-wrap"><a class="moretag" href="' . get_permalink( $post->ID ) . '">' . esc_html__( 'Continue Reading ', 'naturelle' ) . '<span class="screen-reader-text">' . get_the_title() . '</span></a></span>';
 }
 add_filter( 'excerpt_more', 'naturelle_excerpt_more' );
+
+
+/* Add Placehoder in comment Form Fields (Name, Email, Website) */
+add_filter( 'comment_form_default_fields', 'naturelle_comment_placeholders' );
+function naturelle_comment_placeholders( $fields ) {
+	$fields['author'] = str_replace(
+		'<input',
+		'<input placeholder="'.esc_html( 'Name', 'naturelle' ).'"',
+		$fields['author']
+	);
+	$fields['email'] = str_replace(
+		'<input',
+		'<input placeholder="'.esc_html( 'Email', 'naturelle' ).'"',
+		$fields['email']
+	);
+	$fields['url'] = str_replace(
+		'<input',
+		'<input placeholder="'.esc_html( 'Website', 'naturelle' ).'"',
+		$fields['url']
+	);
+	return $fields;
+}
+
+/* Add Placehoder in comment Form Field (Comment) */
+add_filter( 'comment_form_defaults', 'naturelle_textarea_placeholder' );
+function naturelle_textarea_placeholder( $fields ) {
+
+	$fields['comment_field'] = str_replace(
+		'<textarea',
+		'<textarea placeholder="'.esc_html( 'Comment', 'naturelle' ).'"',
+		$fields['comment_field']
+	);
+	return $fields;
+}
+
+/* Search form in footer */
+add_action('llorix_one_lite_header_top_right_close', 'naturelle_add_header_search', 1);
+function naturelle_add_header_search() {
+
+	echo '<div class="header-search">';
+		echo '<div class="glyphicon glyphicon-search header-search-button"><i class="fa fa-search" aria-hidden="true"></i></div>';
+		echo '<div class="header-search-input">';
+			get_search_form();
+		echo '</div>';
+	echo '</div>';
+}
+
+/* Logos title */
+add_action('llorix_one_lite_home_logos_section_open', 'naturelle_logos_title', 1);
+function naturelle_logos_title() {
+	$naturelle_title = get_theme_mod('naturelle_logos_title',esc_html__('Notable partners','naturelle'));
+	if ( ! empty( $naturelle_title ) || is_customize_preview() ) {
+		echo '<h2 class="text-left dark-text' . ( empty( $naturelle_title ) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) . '">' . $naturelle_title . '</h2>';
+	}
+}
+
+/* About button */
+add_action('llorix_one_lite_home_about_section_content_one_after', 'naturelle_about_button', 1);
+function naturelle_about_button() {
+	$naturelle_our_story_button = get_theme_mod( 'naturelle_our_story_button', esc_html__( 'Learn more','naturelle' ) );
+	$naturelle_our_story_button_link = get_theme_mod( 'naturelle_our_story_button_link', esc_html__( '#','naturelle' ) );
+	if( !empty($naturelle_our_story_button) || is_customize_preview() ) {
+		echo '<button id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll standard-button-story'. ( empty($naturelle_our_story_button) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) .'" data-anchor="' . $naturelle_our_story_button_link . '"><span class="screen-reader-text">' . esc_html__( 'Header button label:','llorix-one-lite' ) . $naturelle_our_story_button . '</span>' . $naturelle_our_story_button . '</button>';
+	}
+}
+
+/* Homepage section order */
+function naturelle_sections_order() {
+	$naturelle_order = array(
+		'llorix_one_lite_our_services_section',
+		'sections/llorix_one_lite_our_story_section',
+		'llorix_one_lite_our_team_section',
+		'llorix_one_lite_happy_customers_section',
+		'sections/llorix_one_lite_latest_news_section',
+		'sections/llorix_one_lite_logos_section',
+		'sections/llorix_one_lite_ribbon_section',
+		'sections/llorix_one_lite_contact_info_section',
+		'sections/llorix_one_lite_map_section'
+	);
+	return $naturelle_order;
+}
+add_filter( 'llorix_one_companion_sections_filter', 'naturelle_sections_order');
+
+
