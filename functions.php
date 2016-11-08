@@ -210,4 +210,13 @@ function naturelle_sections_order() {
 }
 add_filter( 'llorix_one_companion_sections_filter', 'naturelle_sections_order');
 
+function naturelle_filters_return_false() {
+	return false;
+}
+add_filter( 'llorix_one_lite_header_logo_filter', 'naturelle_filters_return_false' );
 
+
+function naturelle_filters_return_blank() {
+	return '';
+}
+add_filter( 'llorix_one_lite_header_subtitle_filter', 'naturelle_filters_return_blank' );
