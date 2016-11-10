@@ -5,7 +5,7 @@ Author:         Themeisle
 Author URI:     https://www.themeisle.com/
 Description:    Naturelle is a beatiful one page WordPress theme.
 Template:       llorix-one-lite
-Version:        0.6
+Version:        0.7
 Tags:           responsive-layout, one-column, two-columns, right-sidebar, custom-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
 
@@ -166,6 +166,16 @@ h1.site-title a:hover {
     font-size: 16px;
 }
 
+.very-top-header .social-icons {
+    display: inline-block;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 p.site-description {
     font-size: 14px;
     font-style: italic;
@@ -225,6 +235,115 @@ p.site-description {
 
 .sticky-navigation .main-navigation ul ul a {
     padding: 10px 20px;
+}
+
+/****
+Search form Header
+****/
+.header-search {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    position: relative;
+}
+
+.header-search-button {
+    font-size: 14px;
+    color: #CBC7C2;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.header-search:hover .header-search-button {
+    color: #fff;
+}
+
+.header-search-input {
+    display: none;
+    padding: 0 5px;
+    width: 220px;
+    position: absolute;
+    right: 0;
+    top: 38px;
+    background: rgb(144, 149, 122);
+    z-index: 9;
+}
+
+.header-search-input label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 100%;
+    padding-right: 0;
+}
+
+.header-search.header-search-open .header-search-input {
+    display: block;
+}
+
+.header-search.header-search-open .header-search-button {
+    color: #fff;
+}
+
+.header-search-input input[type=submit] {
+    position: absolute;
+    background: none;
+    border: none;
+    text-indent: -9999999px;
+    width: 33px;
+    height: 37px;
+    top: 0px;
+    right: 5px;
+    z-index: 9;
+    padding: 5px;
+}
+
+.header-search-input input[type="search"] {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    letter-spacing: 2px;
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    line-height: 12px;
+    padding-right: 28px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: 0;
+}
+
+.header-search-input:after {
+    position: absolute;
+    color: #999;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 12px;
+    line-height: 33px;
+    top: 0px;
+    right: 0px;
+    width: 20px;
+    z-index: 8;
+    width: 43px;
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f002";
+    text-align: center;
+    line-height: 37px;
+}
+
+.header-search .fa {
+    top: 0;
+    vertical-align: top;
+    line-height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 /*
@@ -309,7 +428,7 @@ footer.footer #wp-calendar th {
  */
 h1.intro {
     font-family: Montserrat, sans-serif;
-    font-size: 57px;
+    font-size: 59px;
     font-weight: 700;
     line-height: 75px;
     letter-spacing: 5px;
@@ -343,6 +462,10 @@ h1.intro {
     font-family: inherit;
     font-style: italic;
     padding: 15px 0;
+}
+
+.very-top-left > span {
+    font-style: normal;
 }
 
 .very-top-header ul.social-icons {
@@ -509,9 +632,23 @@ h1.intro {
 }
 
 #services .section-header {
-    padding-top: 120px;
-    margin-top: 0;
+    padding-top: 0;
+    margin: 0;
  }
+
+#services .section-overlay-layer {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.services-wrap > .service-box {
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+#services .section-header h2 {
+    margin-top: 80px;
+}
 
 /*
 `* Our team Section
@@ -522,7 +659,8 @@ h1.intro {
 
 .team .section-header {
     position: relative;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
+    margin-top: 0;
 }
 
 .team .section-header:after {
@@ -556,6 +694,10 @@ h1.intro {
     background: rgba(144, 149, 122, 0.9) !important;
 }
 
+.team .section-overlay-layer {
+    padding-top: 120px;
+}
+
 .member-pic img {
     width: auto;
     height: auto;
@@ -567,53 +709,12 @@ h1.intro {
 }
 
 /*
-`* Testimonials section
- */
-.feedback p {
-    font-size: 17px;
-    font-weight: 400;
-    color: #787977;
-    letter-spacing: 0.5px;
-}
-
-.feedback h5 {
-    font-family: Montserrat, sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    color: #3d3d3d;
-    text-transform: uppercase;
-    position: relative;
-}
-
-.feedback .small-text {
-    font-size: 14px;
-    color: #889678;
-}
-
-.feedback .pic-container {
-    position: relative;
-    top: 0;
-    margin-bottom: 20px;
-}
-
-.testimonials-box .feedback {
-    padding-top: 0;
-}
-
-.feedback .pic-container-inner {
-    border: none;
-    box-shadow: none;
-}
-
-.team-member-wrap .team-member-box {
-    padding-right: 50px;
-    padding-left: 50px;
-}
-
-/*
 `* Ribbon section
  */
+.call-to-action {
+    border: none;
+}
+
 .call-to-action h2 {
     font-size: 59px !important;
     letter-spacing: 4px;
@@ -792,13 +893,34 @@ button.control_prev{
     letter-spacing: 0.75px;
 }
 
-.brief.timeline .info p .moretag {
-    display: none;
-}
-
 button.control_prev.fade-btn,
 button.control_next.fade-btn {
     opacity: 0.3 !important;
+}
+
+#latestnews .dark-text {
+    font-size: 38px;
+    font-weight: 700;
+    color: #3d3d3d;
+    text-transform: uppercase;
+}
+
+#latestnews .entry-summary > a {
+    display: none;
+}
+
+.read-more-wrap {
+    width: 100%;
+    float: left;
+}
+
+.read-more-wrap a {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    display: block;
 }
 
 /*
@@ -811,8 +933,8 @@ button.control_next.fade-btn {
 }
 
 .contact-info .section-overlay-layer {
-    padding-top: 70px;
-    padding-bottom: 110px;
+    padding-top: 90px;
+    padding-bottom: 123px;
 }
 
 .icon-container .colored-text {
@@ -825,6 +947,7 @@ button.control_next.fade-btn {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1px;
+    padding-top: 95px;
 }
 
 .contact-info .contact-links a:hover {
@@ -832,7 +955,11 @@ button.control_next.fade-btn {
 }
 
 .contact-info .icon-container {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+}
+
+.contact-link-box .fa {
+    font-size: 34px;
 }
 
 /*
@@ -1010,7 +1137,7 @@ h1.single-title {
 `* Comments
  */
 .comment-list {
-    border-top: 3px solid #90957a;
+    border-top: 5px solid #90957a;
     background: #fff;
     padding: 70px 145px 20px;
 }
@@ -1128,6 +1255,47 @@ h2.comments-title {
     line-height: 25px;
     color: #787977;
     margin-top: 20px;
+}
+
+.comment-author {
+    display: inline-block;
+}
+
+.comment-list .comment-metadata {
+    display: inline-block;
+}
+
+.comment-list .comment-author .says {
+    display: none;
+}
+
+.comment-list  .comment-author .fn {
+    border-right: 2px solid #aaaaaa;
+    padding-right: 10px;
+    margin-right: 7px;
+    display: inline-block;
+    line-height: 12px;
+}
+
+.comment-list .comment-author .fn a,
+.comment-list .comment-metadata a,
+.comment-list .comment-metadata a time {
+    font-family: Montserrat, sans-serif;
+    color: #aaaaaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.comment-list .comment-metadata a:hover,
+.comment-list .comment-metadata a time:hover {
+    color: #f89f7b !important;
+}
+
+.comment-content p {
+    margin-bottom: 0;
 }
 
 /*
@@ -1816,6 +1984,11 @@ p.site-description {
 
 .powered-by {
     border-color: #e7e7e6 !important;
+    color: #b1afae;
+}
+
+.powered-by a {
+    color: #b1afae !important;
 }
 
 .vertical-timeline h3 a {
@@ -1836,6 +2009,128 @@ p.site-description {
 
 .timeline-box-wrap .read-more:hover {
     color: #90957a !important;
+}
+
+.cat-links > i.fa,
+.tags-links > i.fa {
+    display: none;
+}
+
+.cat-links a,
+.tags-links a {
+    font-size: 15px;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.cat-links,
+.tags-links {
+    font-size: 14px;
+    text-transform: lowercase;
+    font-style: italic;
+    color: #787977;
+}
+
+.author-details-content {
+    color: #aaaaaa
+}
+
+.author-details-title {
+    padding-bottom: 15px;
+}
+
+.author-details-title a {
+    color: #b6c4a6 !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.author-details-title a:hover {
+    color: #f89f8b !important;
+}
+
+.comment-form p {
+    padding-left: 0;
+}
+
+.comment-form label {
+    display: none;
+}
+
+/*
+`* Testimonials section
+ */
+.feedback p {
+    font-size: 17px;
+    font-weight: 400;
+    color: #787977;
+    letter-spacing: 0.5px;
+}
+
+.feedback h5 {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #3d3d3d;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.feedback .small-text {
+    font-size: 14px;
+    color: #889678;
+}
+
+.feedback .pic-container {
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+}
+
+.testimonials-box .feedback {
+    padding-top: 0;
+}
+
+.feedback .pic-container-inner {
+    border: none;
+    box-shadow: none;
+}
+
+.team-member-wrap .team-member-box {
+    padding-right: 78px;
+    padding-left: 78px;
+}
+
+.member-pic img {
+    width: 100%;
+}
+
+.team-member-box {
+    width: 33.33333333%;
+}
+
+.member-details {
+    height: 225px;
+    width: 225px;
+}
+
+.team .section-header .sub-heading {
+    color: #e7e7e6 !important;
+}
+
+.team .team-member .member-details .small-text {
+    font-family: 'Bitter', serif;
+    font-style: italic;
+}
+
+.team {
+    border-bottom: none;
 }
 
 /*
@@ -2150,6 +2445,14 @@ p.site-description {
     .client-logos li {
         margin: 25px 30px 25px 30px;
     }
+    .team-member-wrap .team-member-box {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    .member-details {
+        height: 215px;
+        width: 215px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -2163,10 +2466,22 @@ p.site-description {
     .client-logos li {
         margin: 25px;
     }
+    .team-member-wrap .team-member-box {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .member-details {
+        height: 160px;
+        width: 160px;
+    }
 
 }
 
 @media (max-width: 767px) {
+
+    header .navbar-brand {
+        padding: 7px;
+    }
 
     #menu-primary {
         margin-top: 15px;
@@ -2361,7 +2676,53 @@ p.site-description {
     }
 
     #services .section-header {
+        padding-top: 0;
+    }
+
+    #services .section-overlay-layer {
         padding-top: 60px;
+    }
+
+    .team-member-wrap .team-member-box {
+        padding-right: 40px;
+        padding-left: 40px;
+        width: 100%;
+    }
+
+    .member-details {
+        height: 210px;
+        width: 210px;
+    }
+
+    .team .section-overlay-layer {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .contact-info .section-overlay-layer {
+        padding-top: 35px;
+        padding-bottom: 65px;
+    }
+
+    .timeline-box-wrap {
+        padding: 1em 1em 1em 1em;
+    }
+
+    .contact-info .icon-container {
+        margin-bottom: 30px;
+    }
+
+    .comment-list .comment-author img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .post-navigation, .comments-area {
+        margin-top: 50px;
+    }
+
+    h2.comments-title {
+        margin-top: 0;
     }
 
 }
