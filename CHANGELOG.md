@@ -1,4 +1,11 @@
 
+### 0.7 - 10/11/2016
+**Changes:** 
+- Improved Our team section layout
+- Improved Latest news section layout
+- Changed labels to placeholders on the contact form
+- Disable small logo and subtitle by default in the main area
+
 ### 0.6 - 17/10/2016
 **Changes:** 
 - Fixed Safari issue with Latest news section
