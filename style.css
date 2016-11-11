@@ -367,6 +367,7 @@ Search form Header
     color: #787977;
     border-top: 1px solid #e7e7e6;
     padding-top: 30px;
+    margin-top: 40px;
 }
 
 .powered-by a {
@@ -396,6 +397,7 @@ footer.footer .social-icons i:hover:before {
 
 footer.footer .social-icons {
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 footer.footer .widget-title {
