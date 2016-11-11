@@ -425,6 +425,16 @@ footer.footer #wp-calendar th {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+.member-pic img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.member-pic {
+    width: auto !important;
+    height: auto !important;
+}
+
 /*
 `* Intro section
  */
@@ -2105,8 +2115,13 @@ p.site-description {
 }
 
 .team-member-wrap .team-member-box {
-    padding-right: 78px;
-    padding-left: 78px;
+    padding-right: 82px !important;
+    padding-left: 82px !important;
+}
+
+.member-details {
+    height: 216px !important;
+    width: 216px !important;
 }
 
 .member-pic img {
@@ -2455,6 +2470,11 @@ p.site-description {
         height: 215px;
         width: 215px;
     }
+    .team-member-wrap .team-member-box {
+        padding-right: 49px !important;
+        padding-left: 49px !important;
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -2475,6 +2495,14 @@ p.site-description {
     .member-details {
         height: 160px;
         width: 160px;
+    }
+    .team-member-wrap .team-member-box {
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+    }
+    .member-details {
+        height: 180px !important;
+        width: 180px !important;
     }
 
 }
@@ -2725,6 +2753,10 @@ p.site-description {
 
     h2.comments-title {
         margin-top: 0;
+    }
+    .member-details {
+        height: 230px !important;
+        width: 230px !important;
     }
 
 }
