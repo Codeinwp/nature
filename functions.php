@@ -12,7 +12,7 @@ function naturelle_enqueue_styles() {
 	$parent_style = 'naturelle-parent-style';
 	wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'naturelle-fonts', naturelle_fonts_url(), array(), null );
-	wp_enqueue_script( 'naturelle-cutom-script', llorix_one_lite_get_file( '/js/custom.js' ), array(), '1.0.0', true );
+	wp_enqueue_script( 'naturelle-cutom-script', llorix_one_lite_get_file( '/js/custom.js' ), array(), '1.0.1', true );
 }
 add_action( 'wp_enqueue_scripts', 'naturelle_enqueue_styles' );
 
