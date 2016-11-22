@@ -1,4 +1,10 @@
 
+### 0.1.0 - 22/11/2016
+**Changes:** 
+- Fixed issues with the Our team section when using Llorix One Plus plugin
+- Added grunt + fixed generated errors
+- Redo how the footer works when the copyright is empty ( lower the empty space )
+
 ### 0.7 - 10/11/2016
 **Changes:** 
 - Improved Our team section layout
