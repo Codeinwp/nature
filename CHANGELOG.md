@@ -1,4 +1,8 @@
 
+### 1.0.0 - 22/11/2016
+**Changes:** 
+- Update style.css
+
 ### 0.1.0 - 22/11/2016
 **Changes:** 
 - Fixed issues with the Our team section when using Llorix One Plus plugin
