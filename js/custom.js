@@ -1,6 +1,6 @@
 ( function($) {
 
-    $( '.header-search-button' ).click( function(event) {
+    $( '.header-search-button' ).click( function() {
         $( '.header-search' ).toggleClass( 'header-search-open' );
         $( '.navbar-collapse').removeClass( 'in' ).attr( 'aria-expanded', 'false' ).css( 'height', '1px' );
         $( '.navbar-toggle').attr( 'aria-expanded', 'false' );

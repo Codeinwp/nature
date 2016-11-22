@@ -1,7 +1,7 @@
 # naturelle
 child theme for Llorix One Lite
 
-Naturelle WordPress Theme, Copyright 2015 Themeisle
+Naturelle WordPress Theme, Copyright 2016 Themeisle
 Naturelle is distributed under the terms of the GNU GPL
 
 * Images

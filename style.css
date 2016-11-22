@@ -5,7 +5,7 @@ Author:         Themeisle
 Author URI:     https://www.themeisle.com/
 Description:    Naturelle is a beatiful one page WordPress theme.
 Template:       llorix-one-lite
-Version:        0.7
+Version:        0.1.0
 Tags:           responsive-layout, one-column, two-columns, right-sidebar, custom-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
 
@@ -367,6 +367,7 @@ Search form Header
     color: #787977;
     border-top: 1px solid #e7e7e6;
     padding-top: 30px;
+    margin-top: 40px;
 }
 
 .powered-by a {
@@ -396,6 +397,7 @@ footer.footer .social-icons i:hover:before {
 
 footer.footer .social-icons {
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 footer.footer .widget-title {
@@ -421,6 +423,16 @@ footer.footer #wp-calendar th {
 
 footer.footer #wp-calendar th {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.member-pic img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.member-pic {
+    width: auto !important;
+    height: auto !important;
 }
 
 /*
@@ -2103,8 +2115,13 @@ p.site-description {
 }
 
 .team-member-wrap .team-member-box {
-    padding-right: 78px;
-    padding-left: 78px;
+    padding-right: 82px !important;
+    padding-left: 82px !important;
+}
+
+.member-details {
+    height: 216px !important;
+    width: 216px !important;
 }
 
 .member-pic img {
@@ -2453,6 +2470,11 @@ p.site-description {
         height: 215px;
         width: 215px;
     }
+    .team-member-wrap .team-member-box {
+        padding-right: 49px !important;
+        padding-left: 49px !important;
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -2473,6 +2495,14 @@ p.site-description {
     .member-details {
         height: 160px;
         width: 160px;
+    }
+    .team-member-wrap .team-member-box {
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+    }
+    .member-details {
+        height: 180px !important;
+        width: 180px !important;
     }
 
 }
@@ -2723,6 +2753,10 @@ p.site-description {
 
     h2.comments-title {
         margin-top: 0;
+    }
+    .member-details {
+        height: 230px !important;
+        width: 230px !important;
     }
 
 }
