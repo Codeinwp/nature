@@ -21,6 +21,13 @@ add_action( 'wp_enqueue_scripts', 'naturelle_enqueue_styles' );
  */
 function naturelle_image_sizes() {
 	add_image_size( 'naturelle-post-thumbnail', 1366, 550, true ); // Custom image sizes
+
+	/**
+	 * Setup Naturelle's textdomain.
+	 *
+	 * Translations can be filed in the /languages/ directory.
+	 */
+	load_child_theme_textdomain( 'naturelle', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'naturelle_image_sizes', 11 );
 

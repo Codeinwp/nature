@@ -8,6 +8,9 @@ Naturelle is distributed under the terms of the GNU GPL
 
 	License: All unsplash.com images are licensed under the terms of the Creative Commons Zero, http://creativecommons.org/publicdomain/zero/1.0/
 
+	Images from screenshot:
+    	* https://unsplash.com/photos/YN_JWPDYVoM/
+
 	* images/about-us.png
 			Source: https://unsplash.com/photos/wl6YOda2S7I/
 

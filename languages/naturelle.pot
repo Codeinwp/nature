@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Naturelle\n"
+"POT-Creation-Date: 2016-12-02 21:33+0200\n"
+"PO-Revision-Date: 2016-12-02 21:33+0200\n"
+"Last-Translator: \n"
+"Language-Team: ThemeIsle <friends@themeisle.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:51 comments.php:74
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:54 comments.php:77
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:55 comments.php:78
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:90
+msgid "Comments are closed."
+msgstr ""
+
+#: content-search.php:23
+msgid ", "
+msgstr ""
+
+#: content-search.php:28
+msgid "Posted in "
+msgstr ""
+
+#: content-search.php:41 content.php:28
+msgid "No comments"
+msgstr ""
+
+#: content-search.php:41 content.php:28
+msgid "One comment"
+msgstr ""
+
+#: content-search.php:41 content.php:28
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: content-search.php:50 content.php:63
+#, php-format
+msgid "Read more %s ..."
+msgstr ""
+
+#: content-search.php:50 content.php:63
+msgid "about "
+msgstr ""
+
+#: content-search.php:55 content-single.php:45 content.php:68
+msgid "Pages:"
+msgstr ""
+
+#: content.php:11
+#, php-format
+msgid "Blog post: %s"
+msgstr ""
+
+#: functions.php:68
+msgid "powered by"
+msgstr ""
+
+#: functions.php:68
+msgid "WordPress"
+msgstr ""
+
+#: functions.php:85 functions.php:212
+msgid "Notable partners"
+msgstr ""
+
+#: functions.php:90
+msgid "Main title"
+msgstr ""
+
+#: functions.php:97 functions.php:224
+msgid "Learn more"
+msgstr ""
+
+#: functions.php:102
+msgid "Button text"
+msgstr ""
+
+#: functions.php:109 functions.php:225
+msgid "#"
+msgstr ""
+
+#: functions.php:114
+msgid "Button link"
+msgstr ""
+
+#: functions.php:148
+msgid "Continue Reading "
+msgstr ""
+
+#: functions.php:227
+msgid "Header button label:"
+msgstr ""
