@@ -1,4 +1,8 @@
 
+### 1.0.1 - 02/12/2016
+**Changes:** 
+- Define the theme text domain and languages folder
+
 ### 1.0.0 - 22/11/2016
 **Changes:** 
 - Update style.css
