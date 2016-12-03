@@ -157,7 +157,7 @@ add_action( 'after_setup_theme', 'naturelle_theme_setup' );
  */
 function naturelle_excerpt_more( $more ) {
 	global $post;
-	return '<span class="read-more-wrap"><a class="moretag" href="' . get_permalink( $post->ID ) . '">' . esc_html__( 'Continue Reading ', 'naturelle' ) . '<span class="screen-reader-text">' . get_the_title() . '</span></a></span>';
+	return '<span class="read-more-wrap"><a class="moretag" href="' . esc_url( get_permalink( $post->ID ) ) . '">' . esc_html__( 'Continue Reading ', 'naturelle' ) . '<span class="screen-reader-text">' . esc_html( get_the_title() ) . '</span></a></span>';
 }
 add_filter( 'excerpt_more', 'naturelle_excerpt_more' );
 
@@ -169,17 +169,17 @@ add_filter( 'comment_form_default_fields', 'naturelle_comment_placeholders' );
 function naturelle_comment_placeholders( $fields ) {
 	$fields['author'] = str_replace(
 		'<input',
-		'<input placeholder="' . esc_html( 'Name', 'naturelle' ) . '"',
+		'<input placeholder="' . esc_html__( 'Name', 'naturelle' ) . '"',
 		$fields['author']
 	);
 	$fields['email'] = str_replace(
 		'<input',
-		'<input placeholder="' . esc_html( 'Email', 'naturelle' ) . '"',
+		'<input placeholder="' . esc_html__( 'Email', 'naturelle' ) . '"',
 		$fields['email']
 	);
 	$fields['url'] = str_replace(
 		'<input',
-		'<input placeholder="' . esc_html( 'Website', 'naturelle' ) . '"',
+		'<input placeholder="' . esc_html__( 'Website', 'naturelle' ) . '"',
 		$fields['url']
 	);
 	return $fields;
@@ -236,7 +236,7 @@ function naturelle_about_button() {
 	$naturelle_our_story_button = get_theme_mod( 'naturelle_our_story_button', esc_html__( 'Learn more','naturelle' ) );
 	$naturelle_our_story_button_link = get_theme_mod( 'naturelle_our_story_button_link', esc_html__( '#','naturelle' ) );
 	if ( ! empty( $naturelle_our_story_button ) || is_customize_preview() ) {
-		echo '<button id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll standard-button-story' . ( empty( $naturelle_our_story_button ) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) . '" data-anchor="' . $naturelle_our_story_button_link . '"><span class="screen-reader-text">' . esc_html__( 'Header button label:','naturelle' ) . $naturelle_our_story_button . '</span>' . $naturelle_our_story_button . '</button>';
+		echo '<button id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll standard-button-story' . ( empty( $naturelle_our_story_button ) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) . '" data-anchor="' . esc_attr( $naturelle_our_story_button_link ) . '"><span class="screen-reader-text">' . esc_html__( 'Header button label:','naturelle' ) . esc_html( $naturelle_our_story_button ) . '</span>' . esc_html( $naturelle_our_story_button ) . '</button>';
 	}
 }
 
@@ -264,17 +264,11 @@ add_filter( 'llorix_one_companion_sections_filter', 'naturelle_sections_order' )
  *
  * @return bool
  */
-function naturelle_filters_return_false() {
-	return false;
-}
-add_filter( 'llorix_one_lite_header_logo_filter', 'naturelle_filters_return_false' );
+add_filter( 'llorix_one_lite_header_logo_filter', '__return_false' );
 
 /**
  * Disable by default the header subtitle from the parent theme
  *
  * @return string
  */
-function naturelle_filters_return_blank() {
-	return '';
-}
-add_filter( 'llorix_one_lite_header_subtitle_filter', 'naturelle_filters_return_blank' );
+add_filter( 'llorix_one_lite_header_subtitle_filter', '__return_empty_string' );
