@@ -49,7 +49,7 @@ function naturelle_fonts_url() {
      * supported by Bitter, translate this to 'off'. Do not translate into your
      * own language.
      */
-	$bitter = _x( 'on', 'Cabin font: on or off', 'naturelle' );
+	$bitter = _x( 'on', 'Bitter font: on or off', 'naturelle' );
 	if ( 'off' !== $bitter ) {
 		$font_families = array();
 		if ( 'off' !== $bitter ) {
@@ -72,7 +72,12 @@ function naturelle_fonts_url() {
  * @return string
  */
 function naturelle_filter_powered_by( $copyright ) {
-	$copyright = '<a href="http://themeisle.com/themes/naturelle/" target="_blank" rel="nofollow">Naturelle</a> ' . esc_html__( 'powered by', 'naturelle' ) . ' <a href="http://wordpress.org/"  target="_blank" rel="nofollow">' . esc_html__( 'WordPress', 'naturelle' ) . '</a>';
+
+	$copyright = sprintf(
+		__( '%1$s powered by %2$s', 'naturelle' ),
+		sprintf( '<a href="https://themeisle.com/themes/naturelle/" rel="nofollow">%s</a>', esc_html__( 'Naturelle', 'naturelle' ) ),
+		sprintf( '<a href="%1$s" rel="nofollow">%2$s</a>', esc_url( __( 'http://wordpress.org/','naturelle' ) ), esc_html__( 'WordPress', 'naturelle' ) )
+	);
 	return $copyright;
 }
 add_filter( 'llorix_one_lite_powered_by', 'naturelle_filter_powered_by' );
