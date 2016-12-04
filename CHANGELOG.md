@@ -1,4 +1,10 @@
 
+### 1.0.2 - 04/12/2016
+**Changes:** 
+- Fixed translations issues
+- Replaced custom functions with core functions
+- Fixed escaping issues
+
 ### 1.0.1 - 02/12/2016
 **Changes:** 
 - Define the theme text domain and languages folder
