@@ -1,4 +1,8 @@
 
+### 1.0.3 - 04/12/2016
+**Changes:** 
+- Update description
+
 ### 1.0.2 - 04/12/2016
 **Changes:** 
 - Fixed translations issues
