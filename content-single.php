@@ -18,20 +18,24 @@
 			}
 			?>
 			<div class="inner-title-wrap">
-				<div class="container">
-					<div>
-					<?php the_title( '<h1 itemprop="headline" class="entry-title single-title">', '</h1>' ); ?>
-					<div class="entry-meta single-entry-meta">
-						<span class="author-link" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-							<span itemprop="name" class="post-author author vcard">
-								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" itemprop="url" rel="author"><?php the_author(); ?></a>
-							</span>
-			            </span>
-						<time class="post-time posted-on published" datetime="<?php the_time( 'c' ); ?>" itemprop="datePublished">
-							<?php the_time( get_option( 'date_format' ) ); ?>
-						</time>
-					</div><!-- .entry-meta -->
-				</div>
+				<div class="inner-title-wrap-inside">
+					<div class="inner-title-wrap-inside-cell">
+						<div class="container">
+							<div>
+								<?php the_title( '<h1 itemprop="headline" class="entry-title single-title">', '</h1>' ); ?>
+								<div class="entry-meta single-entry-meta">
+									<span class="author-link" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+										<span itemprop="name" class="post-author author vcard">
+											<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" itemprop="url" rel="author"><?php the_author(); ?></a>
+										</span>
+						            </span>
+									<time class="post-time posted-on published" datetime="<?php the_time( 'c' ); ?>" itemprop="datePublished">
+										<?php the_time( get_option( 'date_format' ) ); ?>
+									</time>
+								</div><!-- .entry-meta -->
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header><!-- .entry-header -->
