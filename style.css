@@ -149,7 +149,8 @@ p {
 .sticky-navigation .main-navigation li a {
     font-size: 16px;
     color: #787977;
-    letter-spacing: 1px;
+    letter-spacing: 1.8px;
+    margin: 26px 20px;
 }
 
 h1.site-title a {
