@@ -169,17 +169,17 @@ add_filter( 'comment_form_default_fields', 'naturelle_comment_placeholders' );
 function naturelle_comment_placeholders( $fields ) {
 	$fields['author'] = str_replace(
 		'<input',
-		'<input placeholder="' . esc_html__( 'Name', 'naturelle' ) . '"',
+		'<input placeholder="' . esc_attr__( 'Name', 'naturelle' ) . '"',
 		$fields['author']
 	);
 	$fields['email'] = str_replace(
 		'<input',
-		'<input placeholder="' . esc_html__( 'Email', 'naturelle' ) . '"',
+		'<input placeholder="' . esc_attr__( 'Email', 'naturelle' ) . '"',
 		$fields['email']
 	);
 	$fields['url'] = str_replace(
 		'<input',
-		'<input placeholder="' . esc_html__( 'Website', 'naturelle' ) . '"',
+		'<input placeholder="' . esc_attr__( 'Website', 'naturelle' ) . '"',
 		$fields['url']
 	);
 	return $fields;
