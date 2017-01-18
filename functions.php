@@ -245,10 +245,10 @@ function naturelle_about_button() {
  */
 function naturelle_sections_order() {
 	$naturelle_order = array(
-		'llorix_one_lite_our_services_section',
+		'our-services-section',
 		'sections/llorix_one_lite_our_story_section',
-		'llorix_one_lite_our_team_section',
-		'llorix_one_lite_happy_customers_section',
+		'our-team-section',
+		'happy-customers-section',
 		'sections/llorix_one_lite_latest_news_section',
 		'sections/llorix_one_lite_logos_section',
 		'sections/llorix_one_lite_ribbon_section',
