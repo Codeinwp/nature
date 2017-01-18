@@ -236,7 +236,7 @@ function naturelle_about_button() {
 	$naturelle_our_story_button = get_theme_mod( 'naturelle_our_story_button', esc_html__( 'Learn more','naturelle' ) );
 	$naturelle_our_story_button_link = get_theme_mod( 'naturelle_our_story_button_link', esc_html__( '#','naturelle' ) );
 	if ( ! empty( $naturelle_our_story_button ) || is_customize_preview() ) {
-		echo '<button id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll standard-button-story' . ( empty( $naturelle_our_story_button ) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) . '" data-anchor="' . esc_attr( $naturelle_our_story_button_link ) . '"><span class="screen-reader-text">' . esc_html__( 'Header button label:','naturelle' ) . esc_html( $naturelle_our_story_button ) . '</span>' . esc_html( $naturelle_our_story_button ) . '</button>';
+		echo '<a id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll standard-button-story' . ( empty( $naturelle_our_story_button ) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) . '" href="' . esc_attr( $naturelle_our_story_button_link ) . '"><span class="screen-reader-text">' . esc_html__( 'Header button label:','naturelle' ) . esc_html( $naturelle_our_story_button ) . '</span>' . esc_html( $naturelle_our_story_button ) . '</a>';
 	}
 }
 
