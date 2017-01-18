@@ -169,17 +169,17 @@ add_filter( 'comment_form_default_fields', 'naturelle_comment_placeholders' );
 function naturelle_comment_placeholders( $fields ) {
 	$fields['author'] = str_replace(
 		'<input',
-		'<input placeholder="' . esc_html__( 'Name', 'naturelle' ) . '"',
+		'<input placeholder="' . esc_attr__( 'Name', 'naturelle' ) . '"',
 		$fields['author']
 	);
 	$fields['email'] = str_replace(
 		'<input',
-		'<input placeholder="' . esc_html__( 'Email', 'naturelle' ) . '"',
+		'<input placeholder="' . esc_attr__( 'Email', 'naturelle' ) . '"',
 		$fields['email']
 	);
 	$fields['url'] = str_replace(
 		'<input',
-		'<input placeholder="' . esc_html__( 'Website', 'naturelle' ) . '"',
+		'<input placeholder="' . esc_attr__( 'Website', 'naturelle' ) . '"',
 		$fields['url']
 	);
 	return $fields;
@@ -236,7 +236,7 @@ function naturelle_about_button() {
 	$naturelle_our_story_button = get_theme_mod( 'naturelle_our_story_button', esc_html__( 'Learn more','naturelle' ) );
 	$naturelle_our_story_button_link = get_theme_mod( 'naturelle_our_story_button_link', esc_html__( '#','naturelle' ) );
 	if ( ! empty( $naturelle_our_story_button ) || is_customize_preview() ) {
-		echo '<button id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll standard-button-story' . ( empty( $naturelle_our_story_button ) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) . '" data-anchor="' . esc_attr( $naturelle_our_story_button_link ) . '"><span class="screen-reader-text">' . esc_html__( 'Header button label:','naturelle' ) . esc_html( $naturelle_our_story_button ) . '</span>' . esc_html( $naturelle_our_story_button ) . '</button>';
+		echo '<a id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll standard-button-story' . ( empty( $naturelle_our_story_button ) && is_customize_preview() ? ' llorix_one_lite_only_customizer' : '' ) . '" href="' . esc_attr( $naturelle_our_story_button_link ) . '"><span class="screen-reader-text">' . esc_html__( 'Header button label:','naturelle' ) . esc_html( $naturelle_our_story_button ) . '</span>' . esc_html( $naturelle_our_story_button ) . '</a>';
 	}
 }
 
@@ -245,10 +245,10 @@ function naturelle_about_button() {
  */
 function naturelle_sections_order() {
 	$naturelle_order = array(
-		'llorix_one_lite_our_services_section',
+		'our-services-section',
 		'sections/llorix_one_lite_our_story_section',
-		'llorix_one_lite_our_team_section',
-		'llorix_one_lite_happy_customers_section',
+		'our-team-section',
+		'happy-customers-section',
 		'sections/llorix_one_lite_latest_news_section',
 		'sections/llorix_one_lite_logos_section',
 		'sections/llorix_one_lite_ribbon_section',

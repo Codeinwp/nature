@@ -5,7 +5,7 @@ Author:         Themeisle
 Author URI:     https://www.themeisle.com/
 Description:    Naturelle is a free and beautiful free themes focused on nature, eco, earthy or organic related businesses, but provides a simple and professional look that can be used for any kind of businesses or startups. Naturelle has a green & orange appearance, with buttons and icons promoting simplicity and elegance at their best. The theme provides a responsive blog section, is ecommerce ready (WooCommerce compatible), WPML and SEO friendly. You can use it for your business / startup, shops, corporate enviromental websites, or portfolios.
 Template:       llorix-one-lite
-Version:        1.0.3
+Version:        1.0.4
 Tags:           one-column, two-columns, right-sidebar, custom-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, threaded-comments, translation-ready
 Text Domain:    naturelle
 */
@@ -149,7 +149,9 @@ p {
 .sticky-navigation .main-navigation li a {
     font-size: 16px;
     color: #787977;
-    letter-spacing: 1px;
+    letter-spacing: 1.8px;
+    padding: 26px 20px;
+    margin: 0;
 }
 
 h1.site-title a {
@@ -1064,7 +1066,7 @@ header.single-header {
     margin-top: -50px;
     position: relative;
     min-height: 300px;
-    max-height: 550px;
+    max-height: 400px;
     overflow: hidden;
 }
 
@@ -1086,7 +1088,19 @@ header.single-header img {
     left: 0;
     right: 0;
     z-index: 999;
-    top: 35%;
+    top: 0;
+    bottom: 0;
+}
+
+.inner-title-wrap-inside {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-title-wrap-inside-cell {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 h1.single-title {
@@ -2514,6 +2528,11 @@ p.site-description {
         padding: 7px;
     }
 
+    .sticky-navigation .main-navigation li a {
+        margin: 0;
+        padding: 5px 18px 5px 8px;
+    }
+
     #menu-primary {
         margin-top: 15px;
         padding-top: 15px;
@@ -2579,8 +2598,8 @@ p.site-description {
     header.single-header img {
         min-width: initial;
         max-width: 300%;
-        height: 300px;
-        width: auto;
+        height: auto;
+        width: 100%;
     }
 
     .comment-respond {
@@ -2824,5 +2843,12 @@ p.site-description {
         margin-left: 0;
     }
 
+    header.single-header {
+        min-height: 200px;
+    }
+
+    .header-search {
+        margin-top: 0;
+    }
 
 }
