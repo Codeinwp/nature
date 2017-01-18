@@ -1,4 +1,10 @@
 
+### 1.0.4 - 18/01/2017
+**Changes:** 
+- Fixed incompatibility with Llorix One Companion plugin
+- Fixed issue with the button in the About section not working
+- Improved layout
+
 ### 1.0.3 - 04/12/2016
 **Changes:** 
 - Update description
