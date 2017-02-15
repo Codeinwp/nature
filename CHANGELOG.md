@@ -1,4 +1,8 @@
 
+### 1.0.5 - 15/02/2017
+**Changes:** 
+- Fixed issue with frontpage content section not appearing in Naturelle
+
 ### 1.0.4 - 18/01/2017
 **Changes:** 
 - Fixed incompatibility with Llorix One Companion plugin
