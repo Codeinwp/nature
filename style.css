@@ -976,6 +976,15 @@ button.control_next.fade-btn {
 .contact-link-box .fa {
     font-size: 34px;
 }
+/**
+ * Frontpage content section
+ */
+.frontpage-content h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #3d3d3d;
+    text-transform: uppercase;
+}
 
 /*
 `* Contact page
