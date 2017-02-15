@@ -249,6 +249,7 @@ function naturelle_sections_order() {
 		'sections/llorix_one_lite_our_story_section',
 		'our-team-section',
 		'happy-customers-section',
+		'sections/llorix_one_lite_content_section',
 		'sections/llorix_one_lite_latest_news_section',
 		'sections/llorix_one_lite_logos_section',
 		'sections/llorix_one_lite_ribbon_section',
